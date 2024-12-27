@@ -1,0 +1,46 @@
+
+Ctrl + Shift + L: Select all occurrences of the current selection.
+ctrl + right arrow key : move 1 word
+select specific line + Press Ctrl + K and then press F: format only one selected line
+Ctrl+F2 - Select all occurrences of the current word.
+Ctrl+L - Select the current line.
+
+
+Line Manipulation Shortcuts:
+
+Ctrl + Enter: Insert a new line below the current line.
+Ctrl + Shift + Enter: Insert a new line above the current line.
+Alt + ↑: Move the current line up.
+Alt + ↓: Move the current line down.
+Ctrl + Shift + K: Delete the current line.
+
+
+Find and Replace Shortcuts:
+
+Ctrl + F: Find.
+Ctrl + H: Replace.
+F3: Find next occurrence.
+Shift + F3: Find previous occurrence.
+Ctrl + Shift + F: Find in files (search across the entire workspace).
+Ctrl + Shift + H: Replace in files.
+Ctrl + →: to move 1 word
+
+Code Navigation Shortcuts:
+
+Ctrl + P: Quick Open (Navigate to files by name).
+Ctrl + T: Go to Symbol (Navigate to symbols in the current file).
+Ctrl + Shift + O: Go to Symbol in Workspace (Navigate to symbols across the entire workspace).
+Ctrl + G: Go to Line.
+Ctrl + Shift + M: Show Problems (list of errors and warnings).
+
+
+Code Formatting Shortcuts:
+
+Ctrl + K, Ctrl + F: Format Document.
+Alt + Shift + F: Format Selection.
+
+
+Integrated Terminal Shortcuts:
+
+Ctrl + ` : Toggle Integrated Terminal.
+Ctrl + Shift + `: Create New Integrated Terminal.
