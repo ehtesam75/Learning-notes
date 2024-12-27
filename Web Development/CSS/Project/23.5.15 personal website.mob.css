@@ -1,0 +1,456 @@
+*{
+    box-sizing: border-box;
+    word-spacing: .8mm;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+h1{
+    font-size: 3.1rem;
+    font-family: 'Concert One', cursive;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    color: white;
+    font-weight: 300;
+}
+
+.dotted-hr{
+    width: 90px;
+    border: dotted 6px white;
+    border-bottom: none;
+    margin: 0px auto;
+}
+
+p{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* for mobile */
+[class*="col-"]{
+    width: 100%;
+    float: left;
+}
+
+/* navigation menu starts */
+.navigation{
+    background-color: rgb(151, 181, 216);
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+.nav-icon img{
+    width: 80px;
+    height: 80px;
+    margin-top: 9px;
+}
+
+.nav-bar{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.nav-bar a{
+    background-color: rgba(80, 89, 216, 0.87);
+    text-decoration: none;
+    color: white;
+    margin: 7px 20px;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 1rem;
+    font-family: 'Neuton', serif;
+
+}
+
+.nav-bar a:hover{
+    background-color: gray;
+    border-radius: 1300px;
+    border: 1px solid white;
+}
+
+.navigation::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+
+/* navigation menu ends */
+
+/* intro starts here */
+.introduction{
+    position: relative;
+    padding: 130px 20px;
+}
+
+.first-icon img{
+    transition: transform ;
+    transition-duration: 1s;
+    position: absolute;
+    top: 44px;
+    right: 40px;
+}
+
+.first-icon img:hover{
+    transform: rotate(360deg);
+}
+
+.intro h1{
+    width: 90%;
+    margin: 80px auto 0px auto;
+    font-family: 'Pacifico', cursive;
+    font-weight: 50;
+    font-size: 60px;
+    text-align: center;
+    color: green;
+}
+
+.intro p{
+    font-family: 'Neuton', serif;
+    color: gray;
+    width: 90%;
+    margin: 0px auto 30px auto;
+    word-spacing: .5mm;
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+.last-icon img{
+    margin-top: 90%px;
+    transition: transform 2s;
+    transition-duration: .5s;
+}
+
+.last-icon img:hover{
+    transform: rotate(360deg);
+}
+/* intro ends here */
+
+/* about me starts */
+.about-me{
+    background-color: rgba(20, 118, 163, 0.705);
+    text-align: center;
+}
+
+.about-me-icon img{
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-top: 15px;
+}
+
+.about-me-des{
+    width: 80%;
+    text-align: center;
+    margin: 5px auto 5px 70px;
+    color: white;
+}
+
+.about-me-des a{
+    text-decoration: none;
+    color: white;
+}
+
+.about-me-des button{
+    background-color: rgba(10, 1, 1, 0.87);
+    color: white;
+    padding: 17px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 29px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.about-me-des button:hover{
+    background-color: rgb(87, 86, 86);
+    border: 1px solid white;
+}
+
+.about-me::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+/* about me ends */
+
+/* experience and skill starts */
+
+.experience, .training, .skills{
+    padding: 15px;
+}
+
+.card{
+    background-color: #a39e9e;
+    border-radius: 5px;
+    padding: 10px;
+    transition: .3s;
+    height: 700px;
+    margin: 10px 5px;
+}
+
+.card:hover{
+    box-shadow: 0px 4px 5px 5px black;
+}
+
+.card-icon img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.card-icon{
+    text-align: center;
+}
+
+.card-title h2{
+    background-color: rgba(0, 0, 0, 0.589);
+    border-radius: 10px;
+    font-size: 1.7rem;
+    padding: 4px;
+}
+
+.card a{
+    text-decoration: none;
+    color: white;
+}
+
+.skills-contain li{
+    list-style: none;
+    margin: 30px 10px;
+    font-weight: bolder;
+    position: relative;
+}
+
+.skills-contain li::before{
+    width: 100%;
+    height: 10px;
+    background-color:rgb(118, 118, 136);
+    position: absolute;
+    content: '';
+    top: calc(100% + 5px);
+    border-radius: 1000px;
+}
+
+.skills-contain li::after{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    content: '';
+    top: calc(100% + 5px);
+    border-radius: 1000px;
+
+    background-color:rgba(0, 0, 0, 0.445);
+    left: 0px;
+    width: 0;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+.skills-contain li.html::after{
+    animation-name: html;
+}
+
+@keyframes html{
+    to{
+        width: 70%;
+    }
+}
+
+.skills-contain li.css::after{
+    animation-name: css;
+}
+
+@keyframes css{
+    to{
+        width: 100%;
+    }
+}
+
+.skills-contain li.bs::after{
+    animation-name: bs;
+}
+
+@keyframes bs{
+    to{
+        width: 40%;
+    }
+}
+
+.skills-contain li.js::after{
+    animation-name: bs;
+}
+
+@keyframes js{
+    to{
+        width: 60%;
+    }
+}
+
+.skills-contain li.jqeiry::after{
+    animation-name: jq;
+}
+
+@keyframes jq{
+    to{
+        width: 80%;
+    }
+}
+
+.skills-contain li.node::after{
+    animation-name: node;
+}
+
+@keyframes node{
+    to{
+        width: 90%;
+    }
+}
+
+.skills-contain li.express::after{
+    animation-name: express;
+}
+
+@keyframes express{
+    to{
+        width: 50%;
+    }
+}
+
+.skills-contain li.github::after{
+    animation-name: github;
+}
+
+@keyframes github{
+    to{
+        width: 70%;
+    }
+}
+
+.skills-contain li.react::after{
+    animation-name: ra;
+}
+
+@keyframes ra{
+    to{
+        width: 80%;
+    }
+}
+
+.experience::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+/* experience and skill ends */
+
+/* contact starts */
+.contact{
+    height: 1000px;
+    background-color: rgb(105, 123, 201);
+    color: white;
+}
+
+.contact-me input, textarea{
+    font-size: 1rem;
+    text-align: center;
+    padding: 8px;
+    width: 90%;
+    margin: 10px 40px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact-me{
+    text-align: center;
+}
+
+
+.contact-me button{
+    background-color: rgb(27, 27, 27);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.contact-me button:hover{
+    background-color: #3f3c3c;
+    border: 1px solid white;
+}
+
+.media-icon{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.media-icon button{
+    font-size: 2rem;
+    border: none;
+    padding: 10px;
+    border-radius: 42%;
+    margin: 0px 10px;
+}
+
+.media-icon button:hover{
+    background-color: gray;
+}
+
+.contact::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+/* contact ends */
+
+/* footer starts */
+.footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-nav a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    margin: 15px 0px;
+}
+
+.footer-nav a:hover{
+    color: gray;
+}
+
+.nav-details{
+    margin-top: 50px;
+}
+
+.footer::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+/* footer ends */
+

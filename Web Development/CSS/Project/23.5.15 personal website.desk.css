@@ -1,0 +1,119 @@
+/* for desktop */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* navigation starts here */
+
+.navigation{
+    height: 140px;
+    position: relative;
+}
+
+.nav-title{
+    text-align: right;
+}
+
+.nav-icon img{
+    margin-top: 20px;
+}
+
+.nav-bar{
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 30px;
+    position: absolute;
+    right: 120px;
+}
+
+.nav-bar a{
+    padding: 5px 10px;
+    margin: 20px 0px;
+    font-size: 1.2rem;
+    background-color: transparent;
+}
+
+.nav-bar a:hover{
+    border: none;
+}
+
+/* navigation ends here */
+
+/* intro starts */
+.intro h1{
+    width: 60%;
+}
+
+.intro p{
+    width: 60%;
+}
+/* intro ends */
+
+/* about me start */
+.about-me-icon{
+    margin-top: 100px;
+}
+
+.about-me-icon img{
+    width: 350px;
+    height: 350px;
+}
+    
+
+.about-me-des{
+    padding: 40px 150px 50px 0px;
+    margin: 0px;
+}
+
+.about-me-des p, .button{
+    text-align: left;
+}
+/* about me ends */
+
+/* experience starts */
+.card{
+    margin: 5px 10px;
+}
+/* experience ends*/
+
+/* contact starts here */
+.contact{
+    height: 580px;
+}
+
+.media-icon{
+    width: 30%;    
+    margin-left: 240px;
+}
+
+.media-icon button{
+    margin: 10px 20px;
+}
+/* contact ends here */
+
+/* footer starts here */
+.footer{
+    padding-bottom: 50px;
+}
+.footer-nav{
+    margin-top: 20px;
+}
+
+.footer-nav a{
+    display: inline;
+    padding: 0 15px;
+}
+
+.nav-details{
+    margin-top: 20px;
+}
+/* footer ends here */

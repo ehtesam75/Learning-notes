@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css table</title>
+    <style>
+        table{
+            border: 2px solid black;
+            border-collapse: collapse; /*double border will vanish*/
+            width: 100%;
+        }
+
+        td, th{
+            border: 2px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+
+        th{
+            background-color: darkgreen;
+            color: white;
+            height: 30px;
+            vertical-align: bottom; /*by default its set to 'middle'*/
+        }
+
+        tr:nth-child(even){
+            background-color: gray;
+        }
+
+        tr:nth-child(odd){
+            background-color: gold;
+        }
+
+        tr:hover{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Student Details</caption>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>GPA</th>
+            <th>Phone</th>
+            <th>Bio</th>
+        </tr>
+
+        <tr>
+            <td>101</td>
+            <td>Aleen</td>
+            <td>2.4</td>
+            <td>0187898943</td>
+            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores iste fuga est deleniti tempora! Nemo eius illum obcaecati error sint amet labore culpa! Unde fugit, hic illo enim asperiores nemo!</td>
+        </tr>
+
+        <tr>
+            <td>104</td>
+            <td>Sumon</td>
+            <td>3.4</td>
+            <td>019524983</td>
+            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores iste fuga est deleniti tempora! Nemo eius illum obcaecati error sint amet labore culpa! Unde fugit, hic illo enim asperiores nemo!</td>
+        </tr>
+
+        <tr>
+            <td>109</td>
+            <td>Aleen</td>
+            <td>2.4</td>
+            <td>017524983</td>
+            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores iste fuga est deleniti tempora! Nemo eius illum obcaecati error sint amet labore culpa! Unde fugit, hic illo enim asperiores nemo!</td>
+        </tr>
+
+        <tr>
+            <td>111</td>
+            <td>Nazrul</td>
+            <td>2.9</td>
+            <td>0164454983</td>
+            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores iste fuga est deleniti tempora! Nemo eius illum obcaecati error sint amet labore culpa! Unde fugit, hic illo enim asperiores nemo!</td>
+        </tr>
+    </table>
+</body>
+</html>

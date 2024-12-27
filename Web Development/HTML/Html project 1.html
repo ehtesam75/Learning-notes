@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Challenge</title>
+        <style>
+            h1{
+                text-align: center;
+                color: brown;
+            }
+            table, th, td{
+                border: 2px solid blue;
+                padding: 10px;
+                border-collapse: collapse;
+            }
+          
+        </style>
+    </head>
+    <body>
+        <header>
+        <h1 id="header">Study with Anis</h1>
+    </header>
+        <p style="text-align: center;"><img src="https://img.freepik.com/free-vector/golden-bird-logo-design_1195-336.jpg?size=338&ext=jpg" alt="Logo" width="50px" height="49px" style="align-items: center;"></p>
+        <hr>
+        <iframe src="https://www.studywithanis.com/" frameborder="0" width="49%" height="300px"></iframe>
+        <iframe width="50%" height="300px" src="https://www.youtube.com/embed/C3NTM5vZ_Ao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <hr>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, iusto doloremque quis mollitia porro repellat hic maiores vero illum! Ipsam possimus rem at commodi, nobis sit! Magnam repellat minima exercitationem. Lorem ipsum dolor sit amet.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores officiis fugit fuga vel cupiditate nihil quas! Illo vel, accusamus voluptatem suscipit ea unde, enim voluptates earum amet, quibusdam veniam deserunt illum numquam quia officia perspiciatis. Reprehenderit eos tempore consectetur harum aliquid consequuntur fugit cupiditate itaque.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A enim soluta doloremque beatae harum aspernatur excepturi error atque impedit, nobis laudantium quod deleniti ab totam incidunt voluptates maxime reiciendis fuga.</p>
+        <hr>
+
+        <table >
+            <caption>Student Information</caption>
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>GPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>1</td>
+                <td>Salman</td>
+                <td>2.5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tanha</td>
+                    <td>3.54</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sirajum</td>
+                    <td>3.32</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <form>
+            <datalist id="name">
+                <option value="Aleen">Aleen</option>
+                <option value="Zahin">Zahin</option>
+                <option value="Showrab">Showrab</option>
+            </datalist>
+            <label for="name">User Name:</label>
+            <input type="text" tabindex="2" id="name" list="name" name="name" pattern="[0-9a-zA-Z]+" placeholder="only letter and number" ><br><br>
+            <label for="password">Password:</label>
+            <input type="password" tabindex="1" id="password" name="password" placeholder="enter a password please" required><br><br>
+            <label for="religion">Religion:</label>
+            <input type="checkbox" id="islam" name="religion[]" value="islam" checked>
+            <label for="islam">Islam</label>
+            <input type="checkbox" id="hindu" name="religion[]" value="hindu">
+            <label for="hindu">Hindu</label><br><br>
+            <label for="gender">Gender</label>
+            <input type="radio" id="male" name="gender[]" value="male" >
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender[]" value="female" checked>
+            <label for="female">Female</label><br><br>
+            <label for="dep">department</label>
+            <select id="dep">
+                <option value="EEE">EEE</option>
+                <option value="CSE">CSE</option>
+                <option value="Pharmacy" selected>Pharmacy</option>
+
+            </select><br><br>
+            <label for="random">Anything to say?</label><br>
+            <textarea name="random" id="random" cols="10" rows="5" required></textarea><br><br>
+            <button type="submit" value="submit">Sign Up</button>
+            <button type="reset" value="reset">Clear</button>
+        </form>
+            <hr>
+            <video controls width="300px" height="250px">
+                <source src="mixkit-going-down-a-curved-highway-through-a-mountain-range-41576-medium.mp4" type="video/mp4">
+                Your browser doesn't suppor the video format
+            </video>
+            <audio controls>
+                <source src="mixkit-crickets-and-insects-in-the-wild-ambience-39.wav" type="audio/wav">
+            </audio><br>
+            <nav>
+            <ol>
+                <li><a href="http://facebook.com">My facebook</a></li>
+                <li><a href="http://twitter.com">My twitter</a></li>
+                <li><a href="https://www.studywithanis.com" target="blank">My website</a></li>
+                <li><a href="#header">GO TO TOP OF THE PAGE</a></li>
+            </ol>
+        </nav>
+            <footer>
+           developed by &copy; <cite >Aleen</cite>
+           <!-- i could use 'font' tag in place of span ;remember, span, strike, font are non-semetic, so i need to avoid these tags > -->
+
+        </footer>
+    </body>
+</html>

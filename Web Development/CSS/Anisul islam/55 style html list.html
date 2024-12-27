@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />     <!--we have to add the cdn of font-awesome inorder to use their icons.... go to this website (https://cdnjs.com/libraries/font-awesome) and select "copy link tag" for the first one-->
+
+    <style>
+        .list{
+            background-color: rgba(12, 88, 114, 0.815);
+            color: white;
+            font-size: 1.2rem;
+            padding: 20px;
+        }
+
+        .list ul{
+            list-style-type: square;
+            list-style-position: inside;
+            list-style-image: url("check-mark.png");    /*downloaded from: flaticon; 16px*/
+            list-style: url(check-mark.png) inside circle;
+        }
+
+        .new_list{
+            background-color: gray;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .new_list ul{
+            list-style-type: none;
+        }
+
+        .new_list li::before{
+            content: '\f058';   /*copy the unicode related to the icon u chossed and paste it here*/
+            font-family: 'Font Awesome 6.4.0 Free';   /*didn't work*/
+            font-weight: bold;
+
+            display: inline-block;
+            margin: 10px 5px;
+            color: red; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="list">
+        <ul>/
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>JQuery</li>
+        </ul>
+    </div>
+
+    <div class="new_list">
+        <ul>
+            <li>Biology</li>
+            <li>Math</li>
+            <li>Chemistry</li>
+        </ul>
+    </div>
+</body>
+</html>

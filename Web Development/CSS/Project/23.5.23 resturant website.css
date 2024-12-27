@@ -1,0 +1,329 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 15px;
+    max-width: 1500px;  /*use max-width istead of width while working with responsive website*/
+}
+
+.row::after{
+    clear: both;
+    display: block;
+    content: '';
+}
+
+/* header starts here */
+header{
+    background-color: rgb(0, 54, 202);
+    padding: 25px 15px;
+}
+
+.icon i{
+    border: 4px solid white;
+    border-radius: 50%;
+    padding: 15px;
+    color: white;
+}
+
+.icon{
+    text-align: center;
+}
+
+.nav-bar{
+    margin-top: 20px;
+}
+
+.nav-bar ul li{
+    text-align: center;
+    line-height: 65px;
+    text-transform: uppercase;
+    list-style: none;
+    margin: 0px 0px;
+}
+
+.nav-bar ul li:hover{
+    background-color: rgb(87, 149, 207);
+    border-radius: 15px;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* header ends here */
+
+/* res-det start here */
+#resturant{
+    background-image: url('rest.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+.res-det{
+    text-align: center;
+    padding: 150px 15px;
+}
+
+.res-det h1{
+    font-size: 3.5rem;
+    background-color: yellow;
+    color: rgb(27, 26, 26);
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Handlee', cursive;
+    font-weight: bolder;
+}
+
+.res-det p{
+    background-color: rgb(26, 219, 26);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 70%;
+    margin: 15px auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.res-det p:nth-child(3){
+    width: 35%;
+    transition: .4s;
+}
+
+.res-det p:nth-child(3):hover{
+    transform: scale(1.1);
+}
+
+/* res-det ends here */
+
+/* about us starts */
+#about-us{
+    padding: 10px 0px 20px 0px ;
+}
+
+#about-us h2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+    color: violet;
+}
+
+#about-us p{
+    text-align: justify;
+    font-size: .9rem;
+    padding: 0px 15px;
+}
+/* about us ends */
+
+/* card starts */
+.card img{
+    width: 100%;
+    height: 250px;
+    display: block;
+}
+
+.card{
+    padding: 20px;
+    transition: .4s;
+}
+
+.card h3{
+    text-align: center;
+    background-color: rgb(37, 44, 37);
+    color: white;
+    padding: 5px;
+    font-size: 1.54rem;
+}
+
+.card-body{
+    background-color: rgb(155, 149, 149);
+}
+
+.card-body p{
+    text-align: center;
+    line-height: 30px;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+/* card ends */
+
+/* contact starts */
+#contact{
+    margin: 5px 5px 0 5px ;
+    background-color: rgb(26, 35, 110);
+}
+
+.map iframe{
+    padding: 20px;
+    width: 100%;
+    height: 300px;
+}
+
+.contact-det{
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+/* contact ends */
+
+/* footer starts */
+footer{
+    background-color: black;
+    color: white;
+    padding: 35px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.social-icon i{
+    color: white;
+    padding: 10px 13px;
+    margin-top: 20px;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.social-icon i:hover{
+    background-color: grey;
+}
+
+.social-icon a{
+    padding: 0px 5px;
+}
+/* footer ends */
+
+/* for extra small device */
+[class*="col-"]{
+    width: 100%;
+    float: left;
+}
+
+/* for medium device */
+@media screen and (min-width: 768px){
+    .col-md-1 {width: 8.33%;}
+    .col-md-2 {width: 16.66%;}
+    .col-md-3 {width: 25%;}
+    .col-md-4 {width: 33.33%;}
+    .col-md-5 {width: 41.66%;}
+    .col-md-6 {width: 50%;}
+    .col-md-7 {width: 58.33%;}
+    .col-md-8 {width: 66.66%;}
+    .col-md-9 {width: 75%;}
+    .col-md-10 {width: 83.33%;}
+    .col-md-11 {width: 91.66%;}
+    .col-md-12 {width: 100%;}
+}
+
+/* for large device */
+@media screen and (min-width: 992px){
+
+/* header starts */
+.nav-menu .icon{
+    text-align: left;
+}
+
+.nav-bar{
+    text-align: right;
+}
+
+.nav-bar ul li{
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+.icon i{
+    font-size: 2.5rem;
+}
+
+.icon{
+    margin: 8px 25px;
+}
+
+header{
+    padding: 0;
+}
+
+.nav-bar{
+    margin: 8px 25px;
+}
+
+.nav-bar ul li a{
+    padding: 10px;
+}
+
+.nav-bar ul li:hover{
+    background-color: transparent;
+    text-decoration: underline white 2px;
+}
+/* header ends */
+
+/* rest-det starts */
+.res-det{
+    padding: 170px 15px;
+}
+
+.res-det h1{
+    width: 60%;
+    margin: 0px auto;
+}
+
+.res-det p:nth-child(2){
+    width: 45%;
+    font-size: 1.4rem;
+}
+
+.res-det p:nth-child(3){
+    width: 25%;
+    font-size: 1.5rem;
+}
+/* rest-det ends */
+
+/* contact starts */
+.contact-det{
+    padding:50px;
+}
+/* contact ends */
+
+/* footer starts */
+footer{
+    padding: 15px;
+}
+
+.social-icon i{
+    margin-top: 5px;
+}
+
+.footer-det{
+    padding: 12px 0;
+    text-align: left;
+}
+/* footer ends */
+
+    .col-ld-1 {width: 8.33%;}
+    .col-ld-2 {width: 16.66%;}
+    .col-ld-3 {width: 25%;}
+    .col-ld-4 {width: 33.33%;}
+    .col-ld-5 {width: 41.66%;}
+    .col-ld-6 {width: 50%;}
+    .col-ld-7 {width: 58.33%;}
+    .col-ld-8 {width: 66.66%;}
+    .col-ld-9 {width: 75%;}
+    .col-ld-10 {width: 83.33%;}
+    .col-ld-11 {width: 91.66%;}
+    .col-ld-12 {width: 100%;}
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* html{
+            font-size: 62.5%;
+        } */
+        a.line:hover {
+            /*this is a example of pseudo class*/
+            color: green;
+        }
+
+        #link:hover {
+            background-color: aqua;
+        }
+
+        input {
+            width: 150px;
+            padding: 15px;
+            background-color: blue;
+
+
+        }
+
+        input:hover {
+            /*if i use focus instead of hover here, the style below will be applicable when i click on the input box*/
+            background-color: white;
+            color: red;
+            font-weight: bolder;
+        }
+
+        table,
+        td {
+            border: 1px red solid;
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(odd) {
+            background-color: aqua;
+        }
+
+        /*pseudo element: it works with a portion of something*/
+
+        p::first-line{      /*example of pseudo element*/
+            color: coral;
+            font-weight: 900;
+            font-size: 4.5rem;
+        }
+        p::after{
+            content: ">";
+        }
+        p::before{
+            content: "<";
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <a id="link" href="#">Website</a>
+        <a class="line" href="#">tutorials</a>
+    </section>
+
+    <input type="text" placeholder="Enter your name">
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Roll</td>
+        </tr>
+        <tr>
+            <td>anis</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>nazma</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi cumque est ullam odit distinctio, debitis quisquoporro? Excepturi laborum aliquid a sequi consequatur beatae tempore ratione pariatur, quos temporibus.</p>
+
+    <!-- RELATED TO REM 
+    some web developers prefer to use a font-size of 62.5% (equivalent to 10px), as it makes it easier to calculate font sizes in rem units (where 1rem = 10px)....more on chatgpt
+    
+    Using rem units in CSS allows font sizes and other measurements to scale based on the user's preferred font size settings, making your web page more accessible and adaptable to different devices and user needs   
+    -->
+
+</body>
+
+</html>

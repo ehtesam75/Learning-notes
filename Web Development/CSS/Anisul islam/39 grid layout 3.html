@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto 50% auto auto ;
+            grid-template-columns: repeat(4, 25%); /*means 4 column with 25% space each*/
+            grid-template-columns: 1fr 2fr 1fr 1fr; /*total 5 fraction*/
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));   /*resize screen to see the effect, screen will automatically divide into fraction accor. to screen size, but won't less than 200px for a fraction*/
+            
+        }
+
+        .grid-container > div{
+            border: solid;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati nihil quidem corrupti deserunt, blanditiis at maxime magnam error aperiam nulla laudantium impedit sed numquam excepturi saepe? Consectetur, facilis corrupti.</p></div>
+        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga culpa rerum optio numquam earum et fugit aut consequuntur nisi rem. Aperiam sunt alias ratione ab debitis accusantium voluptates veritatis quas.</p></div>
+        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In debitis fugit voluptates quo tempore inventore saepe blanditiis consequuntur quae sapiente iusto, molestiae quia est architecto maxime totam reiciendis libero doloremque.</p></div>
+        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In debitis fugit voluptates quo tempore inventore saepe blanditiis consequuntur quae sapiente iusto, molestiae quia est architecto maxime totam reiciendis libero doloremque.</p></div>
+        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In debitis fugit voluptates quo tempore inventore saepe blanditiis consequuntur quae sapiente iusto, molestiae quia est architecto maxime totam reiciendis libero doloremque.</p></div>
+        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In debitis fugit voluptates quo tempore inventore saepe blanditiis consequuntur quae sapiente iusto, molestiae quia est architecto maxime totam reiciendis libero doloremque.</p></div>
+
+
+    </div>
+</body>
+</html>

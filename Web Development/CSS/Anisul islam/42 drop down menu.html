@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drop down menu</title>
+    <style>
+        .nav-bar{
+            background-color: #40868b;
+            padding: 1% 7%;
+            text-align: center;
+        }
+
+        .nav-bar a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.2 rem;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .drop_down_container{
+            display: inline;
+            position: relative;
+        }
+
+        .drop_down_content{
+            position: absolute;
+            top: 30px;
+            right: 0px;
+            background-color: #40868b;
+            text-align: left;
+            min-height: 100px;
+            display: none;  /*initially it won't show, will show while hovering*/
+        }
+
+        .drop_down_content a{
+            display: block;
+        }
+
+        .drop_down_container:hover .drop_down_content{
+            display: block;
+        }
+
+        .drop_down_content a:hover{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="#">Home</a>
+        <a href="#">Tutorial</a>
+            <div class="drop_down_container">
+                <a href="#">Contact Me</a>
+                <div class="drop_down_content">
+                    <a href="#">Facebook</a>
+                    <a href="#">Email</a>
+                </div>
+            </div>
+        <a href="#">About Me</a>
+    </div>
+</body>
+</html>

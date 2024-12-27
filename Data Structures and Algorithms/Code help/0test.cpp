@@ -1,0 +1,3 @@
+class newx{
+    int y;
+};

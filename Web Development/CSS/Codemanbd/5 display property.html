@@ -1,0 +1,48 @@
+<!-- 
+Display property:
+* Margins and paddings on the left and right are respected, but not on the top and bottom. (span, a; exceptional: img,,,,) 
+  but margin property works on all sides of inline-block and block elements
+*inline can't have width and height applied to them unlike inline-block, block element
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            margin-left: 80px;
+        }
+        .span{
+            margin-left: 90px;
+            /*display inline by default*/
+            background-color: blue;
+            width: 500px;
+        }
+
+        .span1{
+            margin-left: 60px;
+            display: inline-block;
+            background-color: blue;
+            width: 500px;
+        }
+
+        .span2{
+            margin-left: 60px;
+            display: block;
+            background-color: blue;
+            width: 500px;
+        }
+    </style>
+
+</head>
+<body>
+    <img src="/image/search_img.png" alt="dfd">
+    <br>
+    <span class="span">span</span>
+    <span class="span1">i am allen</span>
+    <span class="span2">2nd span</span>
+</body>
+</html>

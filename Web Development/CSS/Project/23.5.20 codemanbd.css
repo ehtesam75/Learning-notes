@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, p{
+    margin: 0;
+}
+
+.container{
+    width: 800px;
+    margin: 100px auto;
+    border: 3.5px solid #1C3180;
+    border-radius: 5px;
+}
+
+.header{
+    background-color: #1C3180;
+    padding: 18px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-bottom: 4px solid #FE630E;
+
+}
+
+.content{
+    width: 690px;
+    margin: 30px auto;
+}
+
+.content img{
+    width: 100%;
+    height: 400px;
+}
+
+.content h2{
+   margin-left: 10px; 
+   margin-bottom: 10px;
+   font-size: 25px;
+}
+
+.content p{
+    margin-left: 10px;
+}
+
+.content span{
+    color: orange;
+}
+
+.knowledge{
+    background-color: #1C3180;
+    padding: 40px 70px;
+}
+
+.know-container{
+    width: 630px;
+    margin: auto;
+}
+
+.know-container h2{
+   color: #FE630E;
+   padding-bottom: 20px;
+   font-size: 25px;
+}
+
+.know-container p{
+    color: white;
+}
+
+.button-container{
+    margin: 20px 0px 0px 10px;
+}
+
+.btn1{
+    background-color: #FE630E;
+}
+
+.btn2 a{
+    color: black;
+}
+
+.button-container button{
+    padding: 8px;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+button:hover{
+    background-color: gray;
+    text-decoration: 2px underline;
+}
+

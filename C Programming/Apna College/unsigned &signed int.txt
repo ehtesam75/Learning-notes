@@ -1,0 +1,9 @@
+unsigned int and signed int are two different data types in C for storing integer values.
+
+signed int is the default data type for integers in C. It is a signed integer type, which means that it can store both positive and negative integer values. It uses one bit to represent the sign of the value, with the remaining bits representing the magnitude. For example, a signed int with a value of -10 would be represented as 11111111 11111111 11111111 11110110 in two's complement binary notation.
+
+unsigned int is an integer type that can only store non-negative integer values, as it does not use any bits to represent the sign of the value. Instead, all of the bits in the variable are used to represent the magnitude of the value. For example, an unsigned int with a value of 10 would be represented as 00000000 00000000 00000000 00001010 in binary notation.
+
+The size of signed int and unsigned int data types may vary depending on the platform and compiler used. However, in general, signed int and unsigned int have the same size and range, with unsigned int having a larger range of non-negative values, since it doesn't need to store the sign bit.
+
+When working with integers, it's important to choose the appropriate data type based on the requirements of your program. If you only need to store non-negative values, an unsigned int may be more appropriate, while if you need to store both positive and negative values, a signed int may be necessary.

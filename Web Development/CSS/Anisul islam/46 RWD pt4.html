@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .header{
+            background-color: coral;
+            color: white;
+            padding: 1% 5%;
+            text-align: center;
+        }
+
+        .nav-menu{
+            background-color: #39a4ac;
+            padding: 1% 5%;
+        }
+
+        .nav-menu a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px;
+            display: block;
+        }
+
+        .main{
+            padding: 1% 5%;
+            background-color: turquoise;
+        }
+
+        .aside{
+            padding: 1% 5%;
+            background-color: #39a4ac;
+            text-align: center;
+        }
+
+        .footer{
+            background-color: black;
+            padding: 20px;
+            color: white;
+            font-size: .8rem;
+            text-align: center;
+        }
+
+            /*for desktop*/
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+            
+        
+        [class*="col-"]{        /*every col is selected*/
+            float: left;
+            padding: 10px;
+        }
+
+        .row:after{     /*clearing the float after row, cuz everythin (col) is inside row and we use float on them..so need to clear them for footer to work normally*/
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        @media screen and (max-width: 768px){
+            
+            /*for tablet*/
+       .col-s-1 {width: 8.33%;}
+       .col-s-2 {width: 16.66%;}
+       .col-s-3 {width: 25%;}
+       .col-s-4 {width: 33.33%;}
+       .col-s-5 {width: 41.66%;}
+       .col-s-6 {width: 50%;}
+       .col-s-7 {width: 58.33%;}
+       .col-s-8 {width: 66.66%;}
+       .col-s-9 {width: 75%;}
+       .col-s-10 {width: 83.33%;}
+       .col-s-11 {width: 91.66%;}
+       .col-s-12 {width: 100%;}
+           
+       }                                                                                                                
+
+        @media screen and (max-width: 600px){
+            /*for mobile*/
+            [class*="col-"]{
+                width: 100%;
+            }
+
+        
+            .nav-menu a{
+                text-align: center;
+                background-color: rgb(102, 173, 240);
+                margin: 10px;
+                font-weight: bold;
+            }
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Ehtesam</h1>
+    </div>
+
+    <div class="row">
+        <div class="nav-menu col-s-3 col-2">
+            <a href="#">Home</a>
+            <a href="#">Tutorial</a>
+            <a href="#">Contact</a>
+            <a href="#">About Me</a>     
+        </div>
+
+        <div class="main col-s-9 col-7">
+            <h1>I am a developer</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos id vero iste earum maiores dolor, tempore voluptatibus sunt quibusdam necessitatibus nam. Saepe ut aperiam dicta beatae repellendus deserunt ipsum nihil.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam ipsa eum quibusdam, quo cumque odit deserunt perspiciatis nihil, officia necessitatibus facilis voluptate saepe dolores adipisci porro ea incidunt voluptatum earum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestiae nostrum nobis ex iusto omnis, dolorem error facilis veniam molestias, placeat culpa harum quisquam amet officia alias fugit. Neque, maxime.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quasi culpa temporibus, deleniti optio, quibusdam, ut quod error quo molestiae corrupti illo unde natus a? Soluta possimus, at perspiciatis deserunt porro corporis nulla ea velit earum iure vel nihil veniam pariatur omnis dolorum totam molestiae temporibus nobis voluptatibus eligendi ducimus nesciunt odit iste. Est tempora rem ullam maxime atque odio illum esse quidem reiciendis corrupti, ipsum expedita fuga praesentium sunt ut, eaque nam exercitationem hic laboriosam aut architecto! Ipsum dolorum magnam qui, sint quam aperiam rerum delectus incidunt recusandae fuga saepe natus sequi alias quibusdam harum culpa vitae, voluptatem cumque.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis aliquam, minima aliquid consequatur at ratione unde placeat, officia fugit eius, accusamus optio repellendus. Officiis doloremque veritatis, cupiditate nesciunt ipsam quibusdam odio ipsum? Omnis modi odit obcaecati assumenda voluptates, eligendi, sed a accusantium quidem aliquid nemo dolorum dolorem fugit nostrum consequuntur totam earum delectus. Optio cumque repellendus iure veniam velit id sapiente itaque, earum exercitationem facere ducimus aspernatur blanditiis? Labore, delectus aperiam deserunt cupiditate eum esse repellendus autem dolorum porro voluptatum nostrum maxime, hic debitis laboriosam tempore earum nulla sunt blanditiis accusamus. Assumenda libero doloribus a architecto numquam ut deleniti eaque ex cumque quas doloremque officia cupiditate deserunt quae aliquid placeat hic consequuntur molestias voluptatum porro, nobis expedita modi! Similique vel natus nostrum cum repellat. Distinctio nihil sint architecto exercitationem, corrupti placeat quibusdam ea ipsa temporibus delectus omnis eaque, ratione explicabo quisquam doloremque ipsam, debitis atque neque reprehenderit voluptatem vitae! Iusto laudantium natus numquam vero ex possimus provident odio placeat voluptatibus quisquam autem et asperiores, repudiandae id reprehenderit saepe temporibus, repellat in blanditiis. Ipsa nam nobis perferendis dolorum maiores molestias ratione suscipit nisi enim rerum velit autem veniam non illo molestiae sed, sint ullam aspernatur temporibus labore eaque recusandae. Ipsam et ea incidunt cum ut, accusamus officia aperiam qui voluptatem, quasi reiciendis rerum architecto neque esse eos vero quo, necessitatibus illo. Laborum repellendus fuga ducimus illum, quam et natus asperiores cupiditate consectetur inventore commodi doloremque, ipsum dolor itaque molestiae. Alias modi tenetur minus debitis consequatur est, repellat pariatur iste iusto voluptate distinctio beatae maiores laborum consectetur aperiam ad minima ducimus quo? Numquam veniam ut totam cupiditate ducimus architecto enim ex voluptas obcaecati deleniti, fugiat libero beatae quo fuga necessitatibus perspiciatis amet cumque molestias quaerat consequuntur aliquid illum minus est reprehenderit. Perspiciatis nobis fuga ipsa dignissimos accusamus cum adipisci? Dolor voluptas exercitationem veniam, ad recusandae consectetur labore vel cumque pariatur minus minima perferendis nihil modi quod. Praesentium fugit rem reprehenderit assumenda nam quos, voluptate alias et natus earum, illo quis facilis sed eligendi provident, esse quasi ipsum soluta accusamus ullam similique. Consequuntur alias debitis delectus amet numquam tempore enim molestiae inventore ut, autem deserunt praesentium eum officia nam nihil temporibus atque at nisi aspernatur officiis sapiente repellat. Voluptas nemo quos cum saepe quidem repellat iste expedita eius impedit dolorem nihil sed accusantium veritatis aperiam laudantium, distinctio dolorum quibusdam tenetur. Fugiat optio sunt minus eligendi excepturi hic rem voluptates ipsum laborum magni suscipit adipisci ab repudiandae distinctio repellendus veniam est quis, doloremque consectetur quia impedit nihil quo at inventore! Et laboriosam dolorum perferendis? Quasi debitis sapiente perferendis, aperiam quam nemo sunt natus odio ad eaque maiores porro beatae voluptas doloribus, error minima ipsam facere voluptate, repudiandae quas laudantium reprehenderit modi? Sapiente adipisci eveniet, unde et veniam ea amet asperiores natus autem ipsa impedit assumenda, explicabo vero minima, maxime rem quia aut repellendus. Adipisci nihil, ab soluta molestias, error laudantium quae ratione officiis, excepturi nisi modi vitae minus ullam necessitatibus aperiam nostrum autem? Ut et delectus exercitationem unde in expedita tempore vero aliquam molestias.</p>
+
+        </div>
+
+        <div class="aside col-s-12 col-3">
+            <h2>what i love?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam magnam quam nulla labore, aliquam ipsa, consequatur fugiat odit est voluptates eius adipisci perspiciatis animi facere laborum iusto sit a porro.</p>
+
+            <h2>what do i do</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem numquam laboriosam cum fugiat consequuntur necessitatibus unde eaque ipsum doloremque in assumenda ex voluptate culpa, ut nihil expedita aperiam totam similique!</p>
+
+            <h2>what i don't love</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt qui eligendi voluptatem exercitationem vel molestiae labore, eos nostrum, assumenda fugiat asperiores illo aspernatur vero quisquam libero recusandae minima sequi corrupti!</p>
+
+            <h2>what i don't do</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum libero laboriosam deleniti adipisci ea modi? Obcaecati nulla repudiandae harum dignissimos architecto pariatur atque numquam, nisi doloribus, non, quod consequatur earum.</p>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; Study with Aleen. Developed by Aleeen.
+    </div>
+</body>
+</html>

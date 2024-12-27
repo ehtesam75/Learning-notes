@@ -1,0 +1,358 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: auto;
+    max-width: 1000;
+    padding: 20px;
+
+    /* font-family: 'Handlee', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif; */
+}
+
+.row{
+    width: 100%;
+}
+
+[class*="col-"]{
+    float: left;
+    padding: 15px;
+}
+
+
+/* extra small device */
+[class*="col-"]{
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
+/* header starts */
+header{
+    background-color: #24a19c;
+    text-align: center;
+    padding: 0 1%;
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+nav ul li{
+    display: block;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    line-height: 70px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-family:'Roboto', sans-serif;
+    transition: .4s;
+}
+
+nav ul li a:hover{
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.row::after{
+    clear: both;
+    display: block;     /*block or table; use any of these*/
+    content: '';
+}
+/* header ends */
+
+/* banner starts */
+#banner-sec{
+    background-image: url("rest.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.banner{
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.banner h1{
+    width: 100%;
+    margin: 15px auto;
+    font-size: 3.4rem;
+    background: rgba(255, 255, 0, 0.884);
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Handlee', cursive;
+}
+
+.banner p{
+    background-color: rgb(36, 199, 36);
+    color: white;
+    padding: 6px;
+    width: 300px;
+    margin: 5px auto;
+    font-size: 1.3rem;
+    border-radius: 7px;
+}
+
+.banner button{
+    border: none;
+    padding: 10px;
+    background-color: rgb(36, 199, 36);
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: .5s;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.banner button:hover{
+    transform: scale(1.1);
+}
+/* banner ends */
+
+/* about starts */
+#about-us{
+    padding: 1%;
+}
+
+.about-us-contents{
+    text-align: center;
+}
+
+.about-us-contents h3{
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.about-us-contents p{
+    font-size: .8rem;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+/* about ends */
+
+/* food menu starts */
+#food-menu{
+    padding: 1%;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.card-body img{
+    max-width: 100%;
+    height: auto;
+    display: block; /*reason of use this? try commenting it*/
+}
+
+.item-des h3{
+    background-color: rgb(23, 187, 23);
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px;
+}
+
+.item-des p{
+    background-color: rgb(184, 174, 174);
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.card{
+    transition: .4s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+/* food menu ends */
+
+/* contact starts */
+#contact{
+    padding: 1%;
+    background-color: rgb(57, 22, 90);
+}
+
+.contact-det{
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.map{
+    width: 100%;
+    height: 250px;
+}
+
+.contact-det p, address{
+    font-size: 0.9rem;
+}
+/* contact ends */
+
+/* footer :start */
+footer{
+    padding: 1%;
+    color: white;
+    background: rgba(177, 16, 177, 0.747);
+}
+
+footer p{
+    line-height: 32px;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.social-menu{
+    text-align: center;
+}
+
+.icon-style{
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 0 10px;
+    transition: .4s;
+    text-align: center;
+}
+
+.icon-style:hover{
+    background-color: gray;
+    transform: scale(1.2);
+}
+/* footer ends */
+
+/* small device */
+@media screen and (min-width: 576px){
+    .col-sd-1 {width: 8.33%;}
+    .col-sd-2 {width: 16.66%;}
+    .col-sd-3 {width: 25%;}
+    .col-sd-4 {width: 33.33%;}
+    .col-sd-5 {width: 41.66%;}
+    .col-sd-6 {width: 50%;}
+    .col-sd-7 {width: 58.33%;}
+    .col-sd-8 {width: 66.66%;}
+    .col-sd-9 {width: 75%;}
+    .col-sd-10 {width: 83.33%;}
+    .col-sd-11 {width: 91.66%;}
+    .col-sd-12 {width: 100%;}
+}
+
+
+/* medium device */
+@media screen and (min-width: 768px){
+    .col-md-1 {width: 8.33%;}
+    .col-md-2 {width: 16.66%;}
+    .col-md-3 {width: 25%;}
+    .col-md-4 {width: 33.33%;}
+    .col-md-5 {width: 41.66%;}
+    .col-md-6 {width: 50%;}
+    .col-md-7 {width: 58.33%;}
+    .col-md-8 {width: 66.66%;}
+    .col-msd-9 {width: 75%;}
+    .col-md-10 {width: 83.33%;}
+    .col-md-11 {width: 91.66%;}
+    .col-md-12 {width: 100%;}
+}
+
+
+/* large device */
+@media screen and (min-width: 992px){
+
+    .logo-div{
+        text-align: left;
+    }
+
+    nav ul{
+        text-align: right;
+    }
+
+    nav ul li{
+        display: inline-block;
+    }
+
+    nav ul li a{
+        display: inline-block;
+        transition: .4s;
+    }
+
+    nav ul li a:hover{
+        background-color: transparent;
+        transform: scale(1.1);
+        border-radius: 0;
+        text-decoration: underline;
+    }
+
+    /* banner starts */
+    #banner-sec{
+        position: relative;
+        height: 90vh;
+    }
+
+    .banner{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .banner h1{
+        width: 700px;
+        font-size: 3.5rem;
+    }
+
+    .banner p{
+        width: 500px;
+        font-size: 2rem;
+    }
+    /* banner ends */
+
+    /* footer start */
+    footer p{
+        text-align: left;
+    }
+
+    .social-menu{
+        text-align: right;
+    }
+    /* footer ends */
+    .col-ld-1 {width: 8.33%;}
+    .col-ld-2 {width: 16.66%;}
+    .col-ld-3 {width: 25%;}
+    .col-ld-4 {width: 33.33%;}
+    .col-ld-5 {width: 41.66%;}
+    .col-ld-6 {width: 50%;}
+    .col-ld-7 {width: 58.33%;}
+    .col-ld-8 {width: 66.66%;}
+    .col-ld-9 {width: 75%;}
+    .col-ld-10 {width: 83.33%;}
+    .col-ld-11 {width: 91.66%;}
+    .col-ld-12 {width: 100%;}
+}

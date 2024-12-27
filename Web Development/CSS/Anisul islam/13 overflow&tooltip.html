@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow and tooltip</title>
+    <style>
+        .div1{
+            background-color: aqua;
+            height: 150px;
+            width: 150px;
+            /* overflow: hidden; (hidden will hide the extra part) */
+            /* overflow: scroll; (will always display scrollbar, unlike "overflow: auto" ,even if texts are not overflown)*/
+            overflow: auto; /*this will add a scroll only when accomodating is not possible*/
+        }
+        .link{
+            position: relative; /*i should use absolute under relative; thats why i added it*/ 
+        }
+
+        .link .tooltip{
+            background-color: yellow;
+            padding: 10px;
+            visibility: hidden;
+            text-decoration: none;
+            border-radius: 20px;
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            z-index: 1; /*what's the use of this in this code?*/
+        }
+        .link:hover .tooltip{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="link">Facebook
+        <span class="tooltip">Facebook is a social media</span>
+    </a>   
+        
+    <br><br><br><br><br></br>
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi pariatur omnis asperiores praesentium hic natus deserunt vitae, aut eum explicabo maxime fugiat eveniet facere corrupti ex minus, excepturi a at!</p>
+    </div>
+</body>
+</html>

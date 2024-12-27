@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family:'Roboto', sans-serif;
+    background-color: #c9f0f0;
+}
+.container{
+    max-width: 1000px;
+    background-color: #a3f5d3;
+    margin: 0 auto;
+    padding: 20px;
+  
+}
+.profile_photo{
+    width: 100px;
+    height: 110px;
+    border: 3px solid white;
+    border-radius: 50%;
+    float: left;
+}
+.header_bio{
+    float: left;
+    padding: 30px;
+}
+h1, h2, h3, h4, h5{
+    color: rgb(27, 63, 219);
+}
+.header-info{
+    float: left;
+}
+.header_contact{
+    float : right;
+    padding: 30px;
+}
+.header_contact a, .header_contact p{
+    text-decoration: none;
+    color: teal;
+    font-weight: bold;
+}
+.header_contact a:hover{
+    text-decoration: underline;
+    color: tomato;
+}
+.div_clear{
+    clear: both;
+}
+hr{
+    border: solid black 3px;
+    border-bottom: none;
+    margin: 0px auto;
+    width: 100%;
+
+}
+
+/* PERSONAL SECTION STARTS FROM HERE--------- */
+
+#personal_section{
+
+}
+.content{
+    margin-bottom: 30px;
+}
+.left_div{
+    width: 30%;
+    float: left;
+}
+.right_div{
+    width: 70%;
+    float: left;
+}
+.common-br{
+    border: solid black 1px;
+    border-bottom: none;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* work-experience section starts here */
+#work-experience{
+
+}
+/* work-experience section starts here */
+
+/* education starts here */
+.edu-temp-right{
+    float: right;
+    width: 50%;
+}
+.edu-temp-left{
+    float: left;
+    width: 50%;
+}
+/* footer start here */
+.bottom-container{
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+}
+.bottom-container a{
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+}
+.bottom-container p{
+    margin-top: 20px;
+    color: white;
+}

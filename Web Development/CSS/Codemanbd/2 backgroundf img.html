@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first{
+            background-color: aqua;
+            /* padding-top: 200px; */
+            padding: 100px 200px 30px 20px;
+            margin: 40px;
+            box-shadow: inset #0000002e -2px 6px 20px 7px; /*by adding inset, the shadow will apply inside*/
+
+            background-image: url("https://th.bing.com/th/id/R.a6d5f46dc02497871370c59ef49bf286?rik=qP6yIXH20TPhWA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fDownload-High-Res-Wallpaper-HD.jpg&ehk=6DgF%2blo28aThFhKMQdTT4Ly7DPUyUqIEXeW9dRcrWuY%3d&risl=&pid=ImgRaw&r=0");
+            background-position: bottom left;
+            background-size: contain;   /*will cover the whole the img, does not count how many time it might be repeated*/
+            background-repeat: no-repeat;
+            background-size: cover; /*the img will take the whole size of the div*/
+            background-attachment: scroll; /*default*/
+            background-attachment: fixed;   /*will be fixed while scroling*/
+
+            background: url("https://th.bing.com/th/id/R.a6d5f46dc02497871370c59ef49bf286?rik=qP6yIXH20TPhWA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fDownload-High-Res-Wallpaper-HD.jpg&ehk=6DgF%2blo28aThFhKMQdTT4Ly7DPUyUqIEXeW9dRcrWuY%3d&risl=&pid=ImgRaw&r=0") no-repeat fixed bottom left / contain; /*in this serial; 'background-size at last with a '/' in front of it*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="first">
+        <h1>the attachment</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, non doloribus maxime minima expedita reiciendis facilis aut praesentium quibusdam similique nemo fugiat tempore distinctio, quam totam? Dignissimos expedita porro laudantium?</p>
+    </div>
+</body>
+</html>

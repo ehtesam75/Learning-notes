@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav menu</title>
+    <style>
+        #nav{
+            width: 500px;
+            height: 70px;
+            background-color: #639e63;
+            margin: 0 auto; /*'auto' here, only works on block-level elements that have a defined width.*/
+        }
+        #nav ul{}
+        #nav ul li{
+            list-style-type: none;  /*bullet is gone*/
+            margin: 20px;
+            float: left;
+        }
+        #nav ul li a{
+            text-decoration: none; /*underline is gone*/
+            font-size: 25px;
+            color: white;
+            cursor: help;
+        }
+        #nav ul li a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>

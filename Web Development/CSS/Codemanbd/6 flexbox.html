@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        .container{
+            margin: 20px;
+        }
+
+        .box{
+            max-width: 700px;
+            min-height: 500px;  /*will increase height, if necessary; use inspect*/
+            background-color: aquamarine;
+            border: 1px solid black;
+            margin: auto;
+
+            display: flex;
+            flex-direction: column-reverse;
+            flex-direction: row;    /*default*/
+
+            justify-content: flex-end;
+            justify-content: center;    /*will use to center an element horizontally (flex d.: row); so we can use display flex + justify content: center, to center an elements, other than margin: auto*/
+            justify-content: space-between;
+            justify-content: space-around;  /*space in the items that are in the middle will have higher space around them than the items that are with the margin*/
+            justify-content: space-evenly; /*items those r near the side margin will have higher space around them*/
+            
+            align-items: center;    /*will use to center an element vertically (flex dire: column); have to add display:flex as well*/
+            align-items: flex-end;
+            align-items: stretch;   /*will take all the space from top to bottom; to see its effect, try commenting out the height of .box>div*/
+
+
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;        
+            /*
+            so, whem flex-direction is set to column, 'align-items will horizontally center an element, 'justify content' will center that element vertically
+            its the exact oposite of when flex-direction is set to row
+            */
+
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;    /*won't shrink box's width; will take to a new line if there's no space left*/
+            flex-flow: row wrap;  /*flex-flow: flex-direction flex-wrap*/
+            
+        }
+        
+        .box>div{
+            width: 150px;
+            height: 100px;
+        }
+
+        .item1{
+            background-color: red;
+        }
+
+        .item2{
+            background-color: green;
+        }
+
+        .item3{
+            background-color: blue;
+        }
+
+        .item4{
+            background-color: violet;
+        }
+
+        .item5{
+            background-color: brown;
+        }
+
+        .item6{
+            background-color: yellowgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="item1"></div>
+            <div class="item2"></div>
+            <div class="item3"></div>
+            <div class="item4"></div>
+            <div class="item5"></div>
+            <div class="item6"></div>
+        </div>
+    </div>
+</body>
+</html>

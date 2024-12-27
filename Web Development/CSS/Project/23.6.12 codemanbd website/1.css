@@ -1,0 +1,190 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,700&display=swap');
+
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --color-blue: #3936C4;
+    --color-gray: #6A6E78;
+    --color-black: #21202A;
+    --color-cream: #fff6e0;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.container{
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* navigation starts */
+header{
+    background-color: var(--color-cream);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    margin-left: 25px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--color-black);
+
+}
+
+.btn2{
+    padding: 10px 15px;
+    border: 1px solid var(--color-gray);
+    border-radius: 6px;
+    margin-left: 28px;
+    display: inline-block;
+}
+
+.buttons a{
+    text-decoration: none;
+}
+/* navigation ends */
+
+/* hero section starts */
+.hero{
+    background-color: var(--color-cream);
+    height: 90vh;
+}
+
+.hero-block{
+    display: flex;
+    padding-top: 50px;
+}
+
+.hero-block > *{
+    flex-basis: 100%;
+}
+
+.hero-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 190px;
+    margin-bottom: 40px;
+}
+
+.hero-contents h1{
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-contents p{
+    margin-top: 28px;
+    margin-bottom: 36px;
+}
+
+.hero-img img{
+    height: 400px;
+    margin-right: 50px;
+}
+
+.btn3{
+    padding: 5px 15px;
+    background-color: var(--color-blue);
+    border-radius: 6px;
+    display: inline-block;
+    color: white;
+}
+
+.hero-contents a{
+    text-decoration: none;
+}
+/* hero section ends */
+
+/* new starts */
+.new-det{
+    display: flex;
+    gap: 20px;
+}
+
+.new-det>*{
+    flex-basis: 100%;
+    border: 2px solid blueviolet;
+    padding: 30px 20px;
+}
+/* new ends */
+
+
+
+/* responsive design */
+/*when we approch desktop design first: will use max width*/
+/*mobile approch first: min-width*/
+
+@media (max-width: 900px){
+    .header{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    nav ul li{
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .logo{
+        padding-bottom: 10px;
+    }
+
+    .buttons{
+        display: none;
+    }
+
+    .hero-block{
+        flex-direction: column;
+        padding-left: 30px;
+    }
+
+    .hero-contents{
+        padding-right: 80px;
+    }
+
+    .hero-contents p{
+        max-width: 80%;
+        font-size: 14px;
+    }
+
+    .hero-img{
+        margin: auto;
+    }
+
+    .hero-contents{
+        align-items: center;
+        text-align: center;
+    }
+
+    .new-det{
+        margin-top: 200px;
+        flex-direction: column;
+        padding: 30px;
+    }
+
+
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <!-- do know about all kinds of combinators  -->
+    <!-- it can be '+', 'space', or '~' -->
+    <style>
+        section ~ p{
+            background-color: greenyellow;
+        }
+
+        #set{
+            background-color: gray;
+        }
+
+        #set h1{
+            background-color: white;
+            color: blue;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1 id="two">new header</h1>
+    <section id="set">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam error illo quod possimus, mollitia qui
+       <h1>its a new header</h1> 
+    </section>
+
+    <p>This is first one</p>
+    <section>
+        <p>this is the 2nd para</p>
+        <p>this is the 3rd para</p>
+        <div>
+            <p>this is the 4th para</p>
+        </div>
+    </section>
+
+    <p>this is 5th para</p>
+    <p>this is 6th para</p>
+
+    <nav>
+        <a href="#two" >Go to top</a>
+    </nav>
+</body>
+</html>

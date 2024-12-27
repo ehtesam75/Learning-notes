@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav bar</title>
+
+    <style>
+        .menu{
+            background-color: cadetblue;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .menu a{
+            text-decoration: none;
+            padding: 20px;
+            color: white;
+        }
+
+        .menu a:hover{
+            background-color: grey;
+        }
+
+        @media screen and (max-width: 600px){
+            .menu{
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .menu a{
+                background-color: indigo;
+                text-align: center;
+                margin: 10px 0;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Tutorial</a>
+        <a href="#">About Me</a>
+        <a href="#">Contact Me</a>
+    </div>
+</body>
+</html>

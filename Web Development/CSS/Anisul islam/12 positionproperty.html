@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class{
+            border: 3px solid green;
+            padding: 5px;
+            position: static; /*this works like defualt*/
+            top: 20px; /*it won't make any impact here, as i used static as postion earlier*/
+        }
+        .class2{
+            border: 3px solid red;
+            padding: 5px;
+            position: relative;
+            left: 30px;
+        }
+        .class3{
+            border: 3px solid blue;
+            padding: 5px;
+            position: relative;
+            height:300px ;
+        }
+        .class4{
+            border: 4px solid yellow;
+            padding: 5px;
+            position: absolute;
+            top: 110px;
+            left: 20px;
+        }
+        .class5{
+            position: fixed; /*i don't understand the difference between fixed and steaky*/
+            border: 3px solid green;
+            top: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="class5">
+        <p>aleen is my name</p>
+    </div>
+    <br><br></br>
+    <div class="class">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium iste illo expedita deleniti error et non doloremque maxime consequatur animi recusandae necessitatibus, repellendus aperiam fugiat unde tempora nostrum molestias pariatur!</p>
+    </div>
+    <br><br>
+    <div class="class2">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id itaque nisi harum repellendus mollitia! Dicta quasi dolores laboriosam modi earum a odit eligendi nulla assumenda, consequatur iure, cum ipsam vero?</p>
+    </div>
+    <br><br>
+    <div class="class3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed iusto placeat quidem earum totam eveniet nostrum harum quo, porro quasi consequuntur consectetur exercitationem vel sunt culpa id temporibus illo obcaecati?</p>
+        <div class="class4">
+            <p>Hi bangladesh!</p>
+        </div>
+    </div>
+    <br>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, tenetur ducimus corrupti nihil commodi doloribus ex saepe repellendus animi quasi ipsum et quis recusandae hic vitae itaque atque minus inventore voluptatem. Nihil dolor libero, non voluptate inventore esse rerum pariatur eveniet, aperiam distinctio quisquam, dolorum adipisci illum unde sapiente ratione consequatur id sequi. Mollitia distinctio tempore nemo vero sint ipsum unde saepe voluptas repellat. Mollitia ad laudantium facere reiciendis minus vero officiis repellendus, magnam placeat, ipsam natus, incidunt vel velit. Totam eligendi eveniet suscipit recusandae, earum animi quae rem enim deserunt quod, dolor debitis voluptates blanditiis pariatur maiores dicta explicabo?</p>
+</body>
+</html>

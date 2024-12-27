@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css box model</title>
+    <style>
+        .div1{
+            height: auto;
+            width: 500px;
+
+            background-color: #89b38c; /*hex value*/
+            background-color: rgba(22, 32, 2, .6);  /*red, green, blue, alpha (opacity)*/
+            background-color: hsl(0, 100%, 50%);  /*hue, saturation, lightness*/
+            background-color: aqua;
+
+            padding: 30px 30px 25px 20px;
+            margin-left: 70px;
+            margin-top: 50px;
+
+            border-style: groove;   /*by default, solid*/
+            border-style: dashed;
+
+            border: 15px double brown;
+            border: 4px solid aqua;
+            border-left-color: orange;
+            border-radius: 10px;
+
+            box-shadow: #0000007a 5px 4px 12px 0px;     /*do this using browser's inspect mode, more on layout design video 51:00 minite*/
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h1>Bangladesh</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ut, dolor et labore corrupti libero totam iure autem impedit cumque.</p>
+        <a href="#">Get Started</a>
+    </div>
+</body>
+</html>

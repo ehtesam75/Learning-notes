@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            max-width: 900px; /*won't get larger than this (900px), but will fit any screen under the width of 900px ; in responsive design, must use max-width instead of width */
+            min-height: 300px;     /*won't get smaller than this in responsive view*/
+            /* min-width: 400px; */
+            border: 2px solid black;
+            margin: auto;
+            height: auto;
+
+            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            overflow: auto; /*same as scroll; but only display an scrollbar when its nescessary*/  
+        }
+
+        .container img{
+            width: 100%;
+        }
+
+        p{
+            width: 1100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://th.bing.com/th/id/R.727ae4bb0e6f61205d7bdbc533126bc7?rik=9SIuTSzoBoLxdA&pid=ImgRaw&r=0" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur exercitationem voluptate, sint, aspernatur eos non quos ipsum inventore animi blanditiis distinctio ex fuga, cum facere provident soluta quo! Architecto consequatur officiis nemo sapiente laborum qui at, quibusdam quisquam a mollitia blanditiis et vero iste ipsum. Exercitationem error accusantium repellat dolorem?</p>
+    </div>
+</body>
+</html>

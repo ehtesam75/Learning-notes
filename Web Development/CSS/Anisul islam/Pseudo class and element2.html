@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* p:nth-child(2){
+            background-color: aqua;
+        }
+        #new p:last-child{
+            color: blue;
+        }
+        p:nth-child(2n+1){     or we can say odd
+            background-color: green;
+            font-weight: 900;
+            color: white;
+            font-style: normal;
+        }
+
+        li:nth-child(even){
+            background-color: royalblue;
+            font-style: italic;
+        } */
+
+        span:first-child {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+
+        p:first-of-type {
+            background-color: green;
+            color: aliceblue;
+
+        }
+
+        span {
+            display: block;
+            /* Added this to make ::first-letter work . btw first letter psuedo element only works with block level element, not with inline */
+        }
+
+        span::first-letter {
+            font-size: 2rem;
+            color: red;
+        }
+
+        ::selection{        /*it'll be applicable for the whole output. but i could even add 'p'/'span' in before of '::' to make the effect only for those tags. */  
+        background-color: red;
+        color: white;
+        
+    }
+    </style>
+</head>
+
+<body>
+    <section id="new">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, illum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, magni!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, magni!</p>
+        <span>this is in between of span tag</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, illum.</p>
+
+        <ol>
+            <li>mango</li>
+            <li>guava</li>
+            <li>Jackfruite</li>
+            <li>Watermalon</li>
+        </ol>
+    </section>
+
+
+    <div>
+        <span>2nd span of this code</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, magni!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, magni!</p>
+
+    </div>
+
+    
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 1100px;
+            background-color: rgb(236, 190, 133);
+            display: flex;
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            flex-flow: wrap row;
+            justify-content: center;
+            justify-content: space-around; /*will take space from all side*/
+            justify-content: space-between; /*will only take space between div*/
+            justify-content: center; 
+        }
+        .container > div{
+            background-color: aqua;
+            padding: 30px;
+            width: 70px;
+            height: 90px;
+            margin: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1" style="order: 2; flex-basis: 150px;">div 1</div> <!--diffence between flex-basis and width??-->
+        <div class="div2" style="order: 1;">div 2</div>
+        <div class="div3" style="order: 3;">div 3</div>
+        <div class="div4" style="order: 4;">div 4</div>
+        <div class="div5" style="order: 5;">div 5</div>
+        <div class="div6" style="order: 6;">div 6</div>
+        <div class="div7" style="order: 7;">div 7</div>
+    </div>
+</body>
+</html>

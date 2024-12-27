@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width: 50%;
+            background-color: red;
+
+        }
+
+        p:hover{
+            transform: scale(2);
+            transform: scaleY(3);
+        }
+
+        h1:hover{
+            transform: translate(100px, 40px);  /*(x,y)*/
+            transform: translateY(50px);
+        }
+
+        h3{
+            transform: rotate(206deg); /*use inspect to work with rotate easily*/
+            transform: rotate3d(1, 1, 1, 285deg); /*using inspect*/
+        }
+
+        h4{
+            transform: rotateX(175deg);
+        }
+
+        h5{
+            transform: skew(51deg, 173deg);
+        }
+    </style>
+</head>
+<body>
+    <p class="new">
+        this is a para
+    </p>
+
+    <h1>heading</h1>
+
+    <h3>h3 heading</h3>
+    <br><br><br>
+    <h4>h4 heading</h4>
+    <h5>h5 heading</h5>
+</body>
+</html>

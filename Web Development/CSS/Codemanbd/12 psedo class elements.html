@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link{
+            color: red;
+        }
+
+        a:visited{
+            color: green;   /*will apply once i visit the link*/
+        }
+
+        ::marker{
+            color: red;
+            font-size: 20px;
+        }
+
+        ul li:first-child{
+            color: pink;
+        }
+
+        ul li:nth-child(3){
+            font-size: 60px;
+        }
+
+        ul li:nth-last-child(2){
+            font-size: 40px;
+        }
+
+        ::selection{
+            background-color: red;
+            color: white;
+        }
+
+        h1{
+            position: relative;
+            z-index: 2;
+        }
+
+        h1::before{
+            content: '';
+            width: 300px;
+            height: 10px;
+            background-color: rgb(224, 103, 103);
+            position: absolute;
+            transform: translate(0, 25px);
+            left: 40px;
+            z-index: -1;
+            /*in this case, replacing before with after doing the same thing..cuz i'm controling the position with top/translet property*/
+        }
+
+        span{
+            position: relative;
+        }
+
+        span::after{
+            height: 2px;
+            width: 100%;
+            background-color: green;
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="http://www.prothomalo.com" target="blank">Prothom Alo</a>
+    </div>
+
+    <h1>what's the purpose of holding a mango</h1>
+    <span>this is a span</span>
+
+    <nav>
+        <ul>
+            <li>mango</li>
+            <li>oil</li>
+            <li>guava</li>
+            <li>oil</li>
+            <li>orange</li>
+            <li>pain</li>
+        </ul>
+    </nav>
+</body>
+</html>

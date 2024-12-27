@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section .one {
+            background-color: yellow;
+            display: block;
+            /*span was forced to take the whole line*/
+        }
+
+        section #display {
+            background-color: aqua;
+            display: none;
+        }
+
+        /* p{
+            display: inline; (p tag was evicted from taking the whole line)
+        } */
+
+        div {
+            display: list-item;
+        }
+
+        font {
+            display: inherit;
+            /*now it got the display type of parent tag, 'p'*/
+        }
+
+        .three {
+            background-color: aqua;
+            ;
+            display: inline-block;
+        }
+
+        /*inline elements are displayed on the same line as the surrounding content and cannot have a fixed width or height, whereas inline-block elements can have a fixed width and height.
+        inline-block elements can have padding and margins applied to them, whereas inline elements cannot.
+        */
+    </style>
+</head>
+
+<body>
+    <section>
+        Lorem ipsum dolor <span class="one">inline</span> sit amet consectetur <span id="display">display none</span>
+        elit. Doloremque, <span class="two">list item</span>.
+    </section>
+    <div>
+        <p>list one</p>
+        <p>list two</p>
+
+    </div>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>THIS IS A <font>NEW</font> PARAGRAPH</p>
+    <p class="three">this is the last paragraph</p>
+
+
+</body>
+
+</html>
