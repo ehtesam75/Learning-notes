@@ -18,6 +18,9 @@ int32_t main(){
 
     //__builtin_popcountll(); //for 64bits
 
+//power of two
+    //if (n & (n-1)) == 0 then its power of two; otherwise it isn't
+
 
 //save more digit than it can in long long
     ll x = 1000000000000;
