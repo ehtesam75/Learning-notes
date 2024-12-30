@@ -44,5 +44,26 @@ int32_t main(){
     //lower_bound(a, a+n, x);   //returns a pointer
     //use built in funciton; this also follow olog(n) complexity
     //if lb and ub func doesn't find lb and ub then it will return v.end()
+
+
+    //if the array is reversely sorted
+    //3 2 1 -1 -1 -1
+    //int n; cin >> n;
+    // for(int i = 0; i < n; i++){
+    //     cin >> a[i];
+    // }
+
+    // cout << (a+n) - lower_bound(a, a+n, -1, greater<int>()); //3 output
+    //or we could reverse the array first then perform BS
+
+
+//all_of function under algorithm
+    // Check if all elements are positive
+    if (all_of(v.begin(), v.end(), [](int x) { return x > 0; })) {
+        cout << "All elements are positive." << endl;
+    } else {
+        cout << "Not all elements are positive." << endl;
+    }
+
     return 0;
 }
