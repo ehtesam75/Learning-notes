@@ -6,6 +6,9 @@ using namespace std;
 
 int32_t main(){
     FASTER;
+
+//Explicitly access global variable
+    //use :: (scope resulation operator) before the variable
     
 //count set bit
     int r = 13; 
