@@ -60,6 +60,15 @@ int32_t main(){
     //or we could reverse the array first then perform BS
 
 
+/*complexity : set lower bound
+    lower_bound(se.begin(), se.end(), i); // this will work as o(n); for vector : this syntex will work as o(logn) tho
+    se.lower_bound(i)   //o(logn)
+
+    s = s + 'a' //o(len of s)   //string s;
+    s += 'a'    //o(1)
+*/
+
+
 //all_of function under algorithm
     // Check if all elements are positive
     if (all_of(v.begin(), v.end(), [](int x) { return x > 0; })) {
@@ -68,5 +77,27 @@ int32_t main(){
         cout << "Not all elements are positive." << endl;
     }
 
-    return 0;
+//know the data type of vairable
+    int a;
+    cout << typeid(a).name() << endl;
+
+//short 2 byte data type; integer type
+
+//common mistake (from sohag vai blog)
+    ll a = 1e12;
+    vector<ll> v({a, a, a});
+    cout << accumulate(v.begin(), v.end(), 0ll) << endl;    //correct ;make sure to use 0ll for ll
+
+
+//best way to get sqrt of a number
+    /*
+    int a = 81;
+    int ans = sqrt(a);
+
+    while(ans * ans < a) ans++;
+    while(ans * ans > a) ans--;
+    cout << ans << endl;
+    */
+
+
 }
