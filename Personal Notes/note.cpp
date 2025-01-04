@@ -21,6 +21,24 @@ int32_t main(){
 
     //__builtin_popcountll(); //for 64bits
 
+
+//count leading zeroes
+    //how many leading zeroes in the binary of z
+    int z = 5; 
+    cout << "count leading zero (clz) : " << __builtin_clz(z) << endl;
+    //use __builtin_clzll(z) if z is in ll
+
+//count trailing zeroes
+    z = 16;
+    cout << "ctz : " << __builtin_ctz(z) << endl;
+    //__builtin_ctzll(z) for ll
+
+//index of the highest set bit (most significant bit/leftmost bit)
+    z = 15;
+    cout << 31 - __builtin_clz(z) << endl; //output 32 ; used '31 -' because of 0 indexing
+    //cout << 63 - __builtin_clz(z); //for ll 
+    //i can also use __lg(z) for this purpose 
+
 //power of two
     //if (n & (n-1)) == 0 then its power of two; otherwise it isn't
 
@@ -71,21 +89,22 @@ int32_t main(){
 
 //all_of function under algorithm
     // Check if all elements are positive
-    if (all_of(v.begin(), v.end(), [](int x) { return x > 0; })) {
+    /*if (all_of(v.begin(), v.end(), [](int x) { return x > 0; })) {
         cout << "All elements are positive." << endl;
     } else {
         cout << "Not all elements are positive." << endl;
     }
+    */
 
 //know the data type of vairable
-    int a;
-    cout << typeid(a).name() << endl;
+    int d;
+    cout << typeid(d).name() << endl;
 
 //short 2 byte data type; integer type
 
 //common mistake (from sohag vai blog)
-    ll a = 1e12;
-    vector<ll> v({a, a, a});
+    ll o = 1e12;
+    vector<ll> v({o, o, o});
     cout << accumulate(v.begin(), v.end(), 0ll) << endl;    //correct ;make sure to use 0ll for ll
 
 
@@ -98,6 +117,45 @@ int32_t main(){
     while(ans * ans > a) ans--;
     cout << ans << endl;
     */
+
+//best way of getting the floor of log2 of an integer
+    cout << __lg(16);
+
+//constant optimization in code
+    //modulo is slower than arithmatic operation
+    //(a + b) % m
+    //a += b; if(a >= m) a -= m;  //doing the same thing as above line; but this will be faster
+
+
+//stl array
+    //vector<tuple<int, int, int, int>> v;
+    //vector<array<int, 4>> v   //same as above. then benifit?
+    //printing while using tuple can be confusing (for syntex) ; for(auto x : v) cout << get<3>(x) << ' '...
+    //but using stl array in vector, we can write ; for(auto x : v) cout << x[3] << ' '....
+    //so printing becomes mush easier
+
+//uniqe function of vector!
+    //I could have used a set instead of this mess written below
+    //added this just for the learning purpose
+    /*
+    int n; cin >> n;
+    vector<int> v(n);
+    for(int i = 0; i < n; i++){
+        cin >> a[i];
+        v[i] = a[i];
+    }
+
+    sort(v.begin(), v.end());
+    auto it = unique(v.begin(), v.end());
+    v.erase(it, v.end());
+    for(auto x : v) {
+        cout << x << ' ';
+    } cout << endl;
+    */
+
+
+//getting min or max of more than 2 element
+    cout << min({4, 8, 2, 9}) << endl;  //notice : i used a curly braces here
 
 
 }
