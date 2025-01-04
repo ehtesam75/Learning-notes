@@ -8,3 +8,8 @@ ls -force: Displays hidden files as well
 git push origin main --force: Force pushes changes to the main branch
 git log: Displays all commits. Press q to exit
 
+more:
+git pull: Fetches updates and merges them into the current branch.
+git rm <file_name>: Removes a file from the working directory and stages the removal.
+git mv <old_name> <new_name>: Renames or moves a file and stages the change.
+
