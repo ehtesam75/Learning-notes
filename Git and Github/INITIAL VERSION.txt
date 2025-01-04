@@ -1,0 +1,99 @@
+0.
+   clear //clearing terminal
+   cd   //change directory to subfolder
+   cd ..  //back to parent folder
+   ls   //will list file in the directory
+   ls -force    //will display hidden file too
+   git push origin main --force  //force push
+   git log //see all commit     // 'q' to go back
+   fork // rough copy
+
+1. Configuring git:
+   git config --global user.name "ehtesam75"
+   git config --global user.email "ehtesamzunnuryn@gmail.com"
+   git config --list    //the info that i have entered
+
+
+2. Clone and Status
+   git clone <link> //without "<>"; copies file in that link to my local folder
+   git status   //check wheather i edited something or not, terms : modified, untracked
+        untracked : new file that git doesn't yet track
+        modified : edited
+
+        modified / untracked -> add(staged: status) ->commit (status : unchanged)
+        git add *file name*: add new file / edit; like its a stage between modified/untracked and commit
+        git add .   //add all the files in local repo
+        commit : record of changes  
+        git commit -m "some message" //to commit (m for message); still our edit doesn't change anthing in github, so we need to push out changes
+        git push origin main (push changes to remote repo; remote repo is github's one and local repo denoted our pc file)
+        //origin : origin repo (we namaed it) and main : a branch...so we will push in main branch of origin repo
+
+3. make new repo (local repo to github)
+    mkdir LocalRepo //make directory named LocalRepo
+    //try runing ls -force; it will not contain git.ext; cause repo is not initialized
+    git init // initialized git 
+    now ls -force will show git.exe. Means it becomes git repo from local repo
+
+    //now we will need to create a repo on github and copy its link
+    git remote add origin *link*
+    //this will add to the newly created repo (named origin; we could also give a different name)
+
+    git remote -v //to see in what repo are we now
+    git branch //to see in what branch are we now + list of all branches
+    git branch -M *new name* //to rename branch
+
+    get push origin main
+    get push -u origin main //so after this we don't need to wrie "origin main" everytime we upload to remote repo
+
+
+4. workflow : local git
+    github repo -> clone -> changes -> add -> commit -> push
+
+
+5. branch command
+    git branch
+    git branch -M "new name"
+    git checkout -b *new branch*    //create a new branch
+    git checkout *destination branch* //to go to the destination branch
+    git branch -d *branch to delete* //to delete branch; we can not delete the current branch
+
+
+6. merging code of different branch
+    git diff *branch to compare with current branch* //compare the diff between to branch
+    
+    two ways are there to merge two different branch
+    1. merge with github:
+        create a pull request on github and confirm merge 
+        but merge doesn't happen in local repo
+        git pull origin main // pull changes from merge to local repo; pull changes to main branch of local repo
+    2. git merge *with branch to be merge* //merge through command line
+    //what if merge conflict ariese? (merge conflict : changes in same line)
+    watch video from 1h 3m 
+
+
+7. undoing changes 
+    Case 1: stagged change (reset after add)
+    1. git reset *file name* //reset in specific file
+        git reset //reset in all file
+
+    Case 2:  commited change (for one commit) (reset after commit)
+    git reset HEAD~1 //head == letest commit; "~1" means git will 1 commit back
+
+    Case 3 : commited change (for many commit)
+    git reset *commit hash* //we can get commit hash from 'git log'
+
+    //*going back change will only apply to git. vs code won't have any change. to change in vs code also
+    we can say --hard before our commit hash
+    i.e : git reset --hard  5b540e615bbd1909f827d28729386ecf13950b9e
+    so changes will be made in vs code also. and out git status will be nothing to commit
+
+
+8. how to add remote folder to existing github repo
+    a. open that remote folder in vs code
+    b. git init
+    c. git remote add origin <repository_url>
+    d. git add .
+    e. git commit with a message
+    f. git push origin main 
+    
+

@@ -1,0 +1,11 @@
+Creating a New Repository:
+
+
+1. mkdir LocalRepo: Creates a new directory named LocalRepo.
+2. cd LocalRepo: Navigates into the directory.
+3. git init: Initializes an empty Git repository. Hidden files (like .git) will now be visible with ls -a.
+4. Create a new repository on GitHub and copy its link.
+5. git remote add origin <repository_url>: Links the local repository to the remote GitHub repository.
+6. git remote -v: Displays the linked remote repositories.
+7. git branch -M <new_branch_name>: Renames the branch (default is usually main).
+8. git push -u origin main: Pushes changes to the main branch and sets it as the default branch for future pushes.

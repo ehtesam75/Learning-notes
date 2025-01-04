@@ -1,0 +1,10 @@
+General Git Commands
+
+clear: Clears the terminal
+cd: Changes directory to a subfolder
+cd .. : Navigates back to the parent folder
+ls: Lists files in the current directory
+ls -force: Displays hidden files as well
+git push origin main --force: Force pushes changes to the main branch
+git log: Displays all commits. Press q to exit
+

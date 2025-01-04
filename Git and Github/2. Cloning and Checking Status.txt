@@ -1,0 +1,20 @@
+Cloning and Checking Status:
+
+
+1. git clone <repository_url>: Clones the repository to your local machine (replace <repository_url> with the actual link).
+2. git status: Displays the status of your files (e.g., modified, untracked). 
+	Untracked: A new file that Git is not tracking yet.
+	Modified: A file that has been edited but not yet staged.
+
+
+Workflow for Modified/Untracked Files:
+1. git add <file_name>: Stages a specific file (moves it to the staging area).
+2. git add . : Stages all changes (tracked and untracked files).
+3. git commit -m "commit message": Records the changes with a message.
+4. git push origin main: Pushes changes to the main branch of the remote repository.
+
+
+Notes:
+origin: Refers to the default remote repository.
+main: Refers to the branch where changes are pushed.
+

@@ -1,0 +1,5 @@
+Configuring Git:
+
+git config --global user.name "ehtesam75": Sets the global username.
+git config --global user.email "ehtesamzunnuryn@gmail.com": Sets the global email address.
+git config --list: Displays all Git configuration information (global and local).

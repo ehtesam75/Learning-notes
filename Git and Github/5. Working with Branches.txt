@@ -1,0 +1,7 @@
+Working with Branches:
+
+git branch: Lists all branches.
+git branch -M <new_name>: Renames the current branch.
+git checkout -b <new_branch>: Creates and switches to a new branch.
+git checkout <branch_name>: Switches to the specified branch.
+git branch -d <branch_name>: Deletes the specified branch (cannot delete the current branch).

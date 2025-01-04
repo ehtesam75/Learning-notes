@@ -1,0 +1,10 @@
+Undoing Changes:
+
+Case 1: Staged Changes
+	git reset <file_name>: Unstages a specific file.
+	git reset: Unstages all changes.
+Case 2: Committed Changes (One Commit)
+	git reset HEAD~1: Resets the latest commit but keeps changes in the working directory.
+Case 3: Committed Changes (Multiple Commits)
+	git reset <commit_hash>: Resets to a specific commit (use git log to find the hash).
+	git reset --hard <commit_hash>: Resets to a specific commit and applies changes to the working directory.

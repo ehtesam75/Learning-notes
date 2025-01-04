@@ -1,0 +1,20 @@
+Merging Branches:
+
+	git diff <branch_name>: Compares the current branch with another branch.
+
+
+Methods for Merging:
+1.GitHub Interface: 
+	Create a pull request on GitHub.
+	Confirm the merge on GitHub.
+	Pull the merged changes to the local repository: git pull origin main.
+2.Command Line: 
+	git merge <branch_name>: Merges the specified branch into the current branch.
+
+
+
+Resolving Merge Conflicts:
+Conflicts occur when changes in different branches affect the same lines.
+Manually edit the conflicting files to resolve issues.
+Stage resolved files: git add <file_name>.
+Commit the resolution: git commit.

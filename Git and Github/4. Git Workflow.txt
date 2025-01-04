@@ -1,0 +1,7 @@
+Git Workflow:
+
+Clone the GitHub repository: git clone <repository_url>.
+Make changes locally.
+Stage changes: git add .
+Commit changes: git commit -m "message".
+Push changes: git push.

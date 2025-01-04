@@ -1,0 +1,8 @@
+Adding an Existing Folder to a GitHub Repository:
+
+Open the folder in VS Code.
+git init: Initializes a Git repository.
+git remote add origin <repository_url>: Links the repository to GitHub.
+git add . : Stages all files.
+git commit -m "message": Commits the changes.
+git push origin main: Pushes the changes to GitHub.
