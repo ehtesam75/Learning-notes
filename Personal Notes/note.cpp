@@ -42,8 +42,15 @@ int32_t main(){
 //power of two
     //if (n & (n-1)) == 0 then its power of two; otherwise it isn't
 
+    int n; int pw[n+1], mod =1e9 + 7;
+    pw[0] = 1;
+    for(int i = 1; i <= n; i++){
+        pw[i] = 1ll * pw[i-1] * 2 % mod;
+    }
+    //pow of 2 of 1 to n is in a array. now we can just get the pow2 of something from here
+    //as the ans can be huge, it is under mod
 
-//save more digit than it can in long long
+//how to store number than can't be stored in ll?
     ll x = 1000000000000;
     ll y = 1000000000000000;
     __int128 a = (__int128) x * y;	//can save upto 128 bits
@@ -156,6 +163,15 @@ int32_t main(){
 
 //getting min or max of more than 2 element
     cout << min({4, 8, 2, 9}) << endl;  //notice : i used a curly braces here
+
+
+//TERNARY OPARATOR TRICKS
+    int w = 5;
+    cout << "ab"[w == 5] << endl;;
+    //a is 0th element(printed if the condition is false/0)
+    //'b' is the 1st element (printed if the con is true/1)
+    //this can be used in whether a sapce or new line (for last element) is to be printed 
+    //" \n"[i == vector.size()-1]
 
 
 }
