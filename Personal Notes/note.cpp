@@ -34,10 +34,12 @@ int32_t main(){
     //__builtin_ctzll(z) for ll
 
 //index of the highest set bit (most significant bit/leftmost bit)
+//getting the index of MSB
+    
     z = 15;
     cout << 31 - __builtin_clz(z) << endl; //output 32 ; used '31 -' because of 0 indexing
     //cout << 63 - __builtin_clz(z); //for ll 
-    //i can also use __lg(z) for this purpose 
+    //I can also use __lg(z) for this purpose 
 
 //power of two
     //if (n & (n-1)) == 0 then its power of two; otherwise it isn't
