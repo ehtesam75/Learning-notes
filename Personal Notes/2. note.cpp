@@ -53,3 +53,45 @@ formula: how many pairs?
 	assert func will do nothing if the condition is true
 	if not, then assert function will give a runtime error
 	thus we can check what's causing error in the program
+
+
+//vector rotate
+	vector<int> v{1, 2, 3, 4, 5};
+    rotate(v.begin(), v.begin() +2, v.begin() + 4);
+    // rotate(first, middle, last);
+    // first: An iterator to the beginning of the range to rotate.
+    // middle: An iterator pointing to the element that should become the new first element.
+    // last: An iterator to the end of the range to rotate.
+
+    // Elements between [first, middle) are moved to the end of the range.
+    // Elements between [middle, last) are moved to the beginning.
+    for(auto x : v) {
+        cout << x << ' ';
+    } cout << endl;
+
+
+//xor of 0 to n
+	using this we can calculate xor to 0 to n in O(1)
+	int xor_0_to_n(int n){
+	    if(n % 4 == 0) return n;
+	    else if(n % 4 == 1) return 1;
+	    else if(n % 4 == 2) return n + 1;
+	    else return 0;
+	}
+
+
+//divisor : prime factorization
+	Prime Factorization is the process of breaking down a positive integer into a product of prime numbers
+	For any integer n>1, there exists a unique prime factorization: 
+	n = a^p1 * b^p2 * c^p3
+	i. e n = 84
+	84 can be represented as = 2^3 * 3^1 * 7^1 (84/2 => 42/2 => 21/3(next prime num after 2) =>7 (already a prime! so will stop))
+
+	say x = 7^2 * 13^3 + 19^1
+			{7^0, 7^1, 7^2}, {13^0, 13^1, 13^2, 13^3}, {19^0, 19^1}
+			we can take any number of number from each of this three set 
+			and then x will be always divided by their multiplicaton 
+	
+	total number of divisor of x is : (2+1) * (3+1) * (1+1);	//look at the above set, u'll understand..its just counting
+	cuz we know if a a number's prime factorization is = a^x * b ^ y
+	then no. of divisor is = (x +1) * (y+1)
