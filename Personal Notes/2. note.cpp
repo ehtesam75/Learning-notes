@@ -39,7 +39,7 @@ formula: how many pairs?
 
 
 
-//space com
+//related to space complexity
 	const unsigned int MAX_VAL = (1u << 31);
 		//unsigned; cuz 2^31 is out of int range (int max 2^31-1, but for unsigned int its : 2^32-1)
 	bool exits[MAX_VAL];  //1 byte per element   //MAX_VAL bytes ///this will cost 2048 MB memory

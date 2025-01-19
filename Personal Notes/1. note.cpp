@@ -145,7 +145,7 @@ int32_t main(){
 
 //uniqe function of vector!
     //I could have used a set instead of this mess written below
-    //added this just for the learning purpose
+    //added this just for the sack of learning 
     /*
     int n; cin >> n;
     vector<int> v(n);
