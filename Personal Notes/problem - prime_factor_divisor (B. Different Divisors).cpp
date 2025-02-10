@@ -6,7 +6,7 @@ divisor : prime factorization
     i. e n = 84
     84 can be represented as = 2^3 * 3^1 * 7^1 (84/2 => 42/2 => 21/3(next prime num after 2) =>7 (already a prime! so will stop))
 
-    say x = 7^2 * 13^3 + 19^1
+    say x = 7^2 * 13^3 * 19^1
             {7^0, 7^1, 7^2}, {13^0, 13^1, 13^2, 13^3}, {19^0, 19^1}
             we can take any number of number from each of this three set 
             and then x will be always divided by their multiplicaton 

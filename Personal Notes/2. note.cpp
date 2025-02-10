@@ -1,5 +1,8 @@
 /*
 
+co prime 
+	two number is co prime if there gcd is 1
+
 subset
 	the number of even-sized subsets is equal to the number of odd-sized subsets.
 	all subset of {0, 5, 5}?
@@ -36,6 +39,12 @@ formula: how many pairs?
 	number of pairs = n * (n-1);
 	every element (total n elment) can pair with n-1 element of the array
 	thus n * (n-1)
+
+
+//from 1 1 1 1 1 1 
+	how many subset are there that has odd numbers of 1?
+	ans : half of the total possible subset
+	2 ^ n/2 => 2 ^ (n-1)
 
 
 
@@ -95,3 +104,17 @@ formula: how many pairs?
 	total number of divisor of x is : (2+1) * (3+1) * (1+1);	//look at the above set, u'll understand..its just counting
 	cuz we know if a a number's prime factorization is = a^x * b ^ y
 	then no. of divisor is = (x +1) * (y+1)
+
+
+
+//1e9, 1e18...these are in double!
+	ll x = 1e9 + 7;	
+    cout << x << endl;	//output : 1000000007
+    
+    ll x = 1e18 + 7;
+    cout << x << endl;	//output : 1000000000000000000 // which is not correct
+    //cuz 1e18(double). double is causing precision issue;
+    //so we need to convert it into ll
+
+    correct one:
+    ll x = (ll)1e18 + 7
