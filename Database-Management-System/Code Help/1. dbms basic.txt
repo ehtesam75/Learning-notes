@@ -1,0 +1,17 @@
+data is collection of bit
+it may has no meaning
+
+but if u add context to data, it gets meaning, and then it is called information
+process data is called info
+
+DBMS:
+db : data is stroed
+dbms : helps to stores data and help in acess, add, delete, update data
+
+dbms : intermidiate between user and database, helps user to access and modify DB
+
+dbms is divided into 3 schemas architecture so it can provide abstruction
+	internal / physical level abstruction
+	conceptual/logical level
+	external schema / view level
+

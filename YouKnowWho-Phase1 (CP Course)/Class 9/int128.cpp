@@ -29,6 +29,7 @@ int32_t main(){
     
     //__int128 can store 128 bits
     //but it can't be used for input or output directly
+    //so we will use user defined func to take input or output
     __int128 x = input_int128();
     __int128 y = input_int128();
     __int128 z = x * y;
