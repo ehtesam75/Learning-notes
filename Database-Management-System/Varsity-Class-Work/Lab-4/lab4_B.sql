@@ -1,51 +1,57 @@
-drop table dependent cascade constraints;
-drop table employee cascade constraints;
-drop table department cascade constraints;
+drop table sales cascade constraints;
 
-create table department (
-    dname varchar2(20),
-    dnumber number(2) primary key,
-    mgrssn number(10),
-    mgrstartdate date
+create table sales(
+    id number(10),
+    product varchar2(10),
+    category varchar2(10),
+    quantity number(10),
+    price number(10)
 );
 
-create table employee(
-    fname varchar2(15),
-    minit varchar2(2),
-    lname varchar2(15),
-    ssn number(10) not null,
-    bdate date,
-    address varchar2(35),
-    sex varchar2(1),
-    salary number(7) not null,
-    superssn number(10),
-    dno number(2) not null,
-    primary key(ssn),
-    foreign key(dno) references department(dnumber) on delete cascade
-);
+insert into sales values (1, 'Phone', 'Mobile', 5, 200);
+insert into sales values (2, 'Phone', 'Computer', null, 200);
+insert into sales values (3, 'Laptop', 'Computer', null, 800);
+insert into sales values (4, 'Tablet', 'Mobile', 4, 300);
+insert into sales values (5, 'Phone', 'Computer', 2, 150);
 
-create table dependent(
-    dependent_name varchar2(15),
-    essn number(10),
-    sex varchar2(1),
-    bdate date,
-    relationship varchar2(10),
-    primary key(essn, dependent_name),
-    foreign key(essn) references employee(ssn) on delete cascade
-);
 
-insert into department values('Research', 1, 23234, '12-April-2002');
-insert into department values('administration', 2, 3543545, '13-April-2002');
-insert into department values('headquater', 4, 64645, '15-April-2004');
+select count(*) as total_sales from sales;
+select count(quantity) as total_sales from sales;
+select sum(quantity) as total_quantity from sales;
+select count(distinct product), count(all product), count(product) from sales;
+--later two is same
+select max(product) as max_price from sales;
 
-insert into employee values('ehtesam', 'C', 'zunnuryn', 323, '10-October-2000', 'Dhaka', 'M', '25000', 12, '1');
-insert into employee values('kamal', 'C', 'ahmed', 23, '6-October-2000', 'Mirpur', 'M', '28000', 132, '1');
-insert into employee values('sabrina', 'R', 'rahman', 231, '15-November-1996', 'Rajarbag', 'F', '35000', 199, '4');
-insert into employee values('sadia', 'C', 'rahman', 199, '15-November-1996', 'Rajarbag', 'F', '35000', 102, '4');
-insert into employee values('Rajjak', 'T', 'Hossain', 189, '19-November-1996', 'Bhairab', 'M', '70000', 111, '2');
-insert into employee values('Rifat', 'K', 'Hossain', 209, '19-November-1997', 'Bhairab', 'M', '10000', 171, '2');
+/*
+COUNT, MIN, and MAX apply to numeric and non-numeric fields, but SUM and
+AVG may be used on numeric fields only.
+Apart from COUNT(*), each function eliminates nulls first and operates only on
+remaining non-null values.
+COUNT(*) counts all rows of a column, regardless of whether nulls or duplicate
+values occur.
+*/
 
-insert into dependent values('sadia', 323, 'F', '10-October-2003', 'daughter');
-insert into dependent values('Malaika', 23, 'F', '10-January-2005', 'daughter');
-insert into dependent values('Jamal', 323, 'M', '20-January-2005', 'son');
-insert into dependent values('Ridha', 231, 'F', '10-October-2003', 'spouse');
+select product, sum(price) as total_price from sales group by product order by total_price desc;
+select product, category, sum(price) as total_price from sales group by product, category;
+
+select count(category), category, sum(quantity) as total_quatity, sum(price), avg(price) from sales group by category;
+select category, avg(price) as avg_price_greater_than_300 from sales group by category having avg(price) > 300;
+
+
+select avg(nvl(quantity, 10)) as avg_quantity from sales;
+--all null value will be replaced by 10
+
+select quantity, sum(price) from sales group by quantity;
+/*
+When you GROUP BY a column that contains NULL values for some rows, all the
+rows with NULL values are placed into a single group and presented as one summary
+row in the output
+*/
+
+
+select product, price from sales group by product, price having price >= 200;
+select product from sales group by product having sum(quantity) > 5;
+/*
+A HAVING condition can refer only to an expression in the SELECT list, 
+or to an expression involving an aggregate function.
+*/
