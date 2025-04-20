@@ -19,7 +19,8 @@ change(dict)
 print(dict) #{'name': 'joyi'}
 #so for dictonary it works like pass by reference
 
-#return
+
+#return statement
 def hi(name):
     if not name:    #if no name is passed
         print("no name, no hi:)")

@@ -1,5 +1,5 @@
 #set
-#can be changed
+#can be changed (mutable), unordered, iterable, and unindexed
 #set do not store an item more than once
 
 set1 = {"nazmul", "jannat", "habib"}

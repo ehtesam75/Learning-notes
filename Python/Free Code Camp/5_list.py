@@ -19,7 +19,7 @@ random.clear() #clear the
 random += ["one", "two", "three", "four", "Z"] 
 
 
-#insert
+#insert (append and extend is mentioned above)
 random.insert(2, "new word") #insert "new word" at index 2
 #['one', 'two', 'new word', 'three', 'four', 'Z']
 random[1:1] = ["test1", "test2"] #insert at index 1
