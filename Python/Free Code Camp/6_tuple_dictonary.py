@@ -31,3 +31,35 @@ dict = {"name" : "ehtesam", "age" : 23, "choices" : color} #key and value pair
 print(f"Name : {dict['name']}") #f is formated string literal (f string), lets me use variables inside (inside {})
 print("Name : " + dict['name'])  #another way : without using f string
 
+dict["age"] = 53 #value can be changed
+print(dict.get("age")) #53
+print(dict.get("height", "default value")) #default value if key not found
+
+
+#removing item
+print(dict.pop("name"))
+print(dict) #{'age': 53, 'choices': 'red'}
+print(dict.popitem()) #remove last item
+
+#checking if key present
+print("age" in dict) #true
+
+#update dictionary
+dict.update({"address" : "dhaka"})
+dict["home"] = "bhairab"
+print(dict.keys()) 
+
+print(list(dict.keys())) #keys will be in a list
+print(list(dict.values())) 
+print(list(dict.items())) #key and value in a list of tuples
+
+#length
+print(len(dict)) #3
+
+#delete
+del dict['home'] 
+print(dict) #{'age': 53, 'address': 'dhaka'}
+
+#copy a dictoanry
+dict_copy = dict.copy();
+print(dict_copy)
