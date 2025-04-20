@@ -20,3 +20,7 @@ print(result)
 food = ["pizza", "burger", "eggs"] #list of strings
 dinner = random.choice(food) #randomly select one item from the list
 print(dinner)
+
+#print
+print("test", end = "") #no newline added
+print("test") #newline auto added at the end
