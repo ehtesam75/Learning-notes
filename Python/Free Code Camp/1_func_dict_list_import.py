@@ -16,17 +16,6 @@ result = get_choice("scissors") #calling function
 print(result)
 
 
-#dictonary : key and value pair
-color = "red"
-dict = {"name" : "ehtesam", "age" : 23, "choices" : color} #key and value pair
-#value can be a variable, then it won't need to have ""
-#print(dict) #will print the whole dictonary
-
-print(f"Name : {dict['name']}") #f is formated string literal (f string), lets me use variables inside (inside {})
-print("Name : " + dict['name'])  #another way : without using f string
-
-
-
 #list : like array in c, but more flexible
 food = ["pizza", "burger", "eggs"] #list of strings
 dinner = random.choice(food) #randomly select one item from the list

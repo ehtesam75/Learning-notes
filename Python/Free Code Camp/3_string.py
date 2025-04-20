@@ -5,6 +5,10 @@ b = a + ' name ' + " is " + name #concatenation
 b += " and that right"
 print(b)
 
+#f string
+print(f"my name is {name}") #my name is ehtesam
+print("my name is " + name) #my name is ehtesam
+
 #multiline string
 print("""
 
