@@ -23,7 +23,7 @@ d = dict()
 for i in range(n):
     key = "P" + str(i+1)
     at = int(input("Enter arrival time for process P" + str(i+1) + ": "))
-    bt = int(input("Enter brust time for process P" + str(i+1) + ": "))
+    bt = int(input("Enter burst time for process P" + str(i+1) + ": "))
     l = []
     l.append(at)
     l.append(bt)
