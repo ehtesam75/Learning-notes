@@ -18,6 +18,11 @@ print(sorted(name)) #['ehtesam', 'kamal', 'olin'] #created a new tuple and sorte
 new_tuple = name + ("jamal", "rahim")
 print(new_tuple) #('olin', 'ehtesam', 'kamal', 'jamal', 'rahim')
 
+#tuple unpacking
+tuple = (2, 3)
+a, b = tuple
+print(f"tuple unpaking a : {a}, b : {b}")  #tuple unpaking a : 2, b : 3
+
 
 
 #dictonary 

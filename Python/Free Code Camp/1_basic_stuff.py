@@ -24,3 +24,9 @@ print(dinner)
 #print
 print("test", end = "") #no newline added
 print("test") #newline auto added at the end
+
+print("-" * 20)
+
+ans = 3
+print(f"{ans :.2f}")    #3.00
+print(f"{ans : <8} text after space")   #3        text after space

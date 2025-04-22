@@ -50,3 +50,23 @@ print(sorted(list_copy, key = str.lower)) #sorted() will return a new list, with
 
 print(list_copy) 
 #['one', 'test1', 'test2', 'test3', 'test4', 'three', 'four', 'Z']
+
+
+
+#list compression
+
+num = [1, 2, 3, 4]
+
+multiply = [x*2 for x in num]
+print(multiply) #[2, 4, 6, 8]
+
+even = [x for x in num if x % 2 == 0]
+print(even)  #[2, 4]
+
+square = [x**2 for x in num]
+print(square) #[1, 4, 9, 16]
+
+list_of_tuple = [(x, x**2) for x in num]
+print(list_of_tuple) #[(1, 1), (2, 4), (3, 9), (4, 16)] 
+
+

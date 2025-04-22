@@ -22,11 +22,11 @@ d = dict()
 
 for i in range(n):
     key = "P" + str(i+1)
-    a = int(input("Enter arrival time for process P" + str(i+1) + ": "))
-    b = int(input("Enter brust time for process P" + str(i+1) + ": "))
+    at = int(input("Enter arrival time for process P" + str(i+1) + ": "))
+    bt = int(input("Enter brust time for process P" + str(i+1) + ": "))
     l = []
-    l.append(a)
-    l.append(b)
+    l.append(at)
+    l.append(bt)
     d[key] = l
 
 # d = [
@@ -90,10 +90,12 @@ final = sorted(final, key = lambda x : int(x[0][1:]))
 # x[0][1:] takes the number part → "3", "1"...
 # int(...) co
 
-print("Process | Arrival | Brust | Completion | Turn around | Waiting")
+print("\nProcess | Arrival | Brust | Completion | Turn around | Waiting")
+print("-" * 65)
+
 for row in final:
     print(
-        f"{row[0]:<8} | {row[1]:<7} | {row[2]:<5} | {row[3]:<10} | {row[4]:<10} | {row[5]:<7}"
+        f"{row[0]:<7} | {row[1]:<7} | {row[2]:<5} | {row[3]:<10} | {row[4]:<11} | {row[5]:<7}"
     )
 
-print(f"Average waiting time : {res:.2f}")
+print(f"\nAverage waiting time : {res:.2f}")
