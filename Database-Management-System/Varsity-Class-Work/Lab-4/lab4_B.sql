@@ -19,7 +19,7 @@ select count(*) as total_sales from sales;
 select count(quantity) as total_sales from sales;
 select sum(quantity) as total_quantity from sales;
 select count(distinct product), count(all product), count(product) from sales;
---later two is same
+--later two are same
 select max(product) as max_price from sales;
 
 /*

@@ -1,3 +1,9 @@
+/*
+ON DELETE CASCADE: Automatically deletes related rows in the child table when a row in the parent table is deleted.
+ON DELETE SET NULL: Sets the foreign key column in the child table to NULL when the corresponding row in the parent table is deleted.
+ON DELETE NO ACTION (default): Prevents deletion of a row in the parent table if there are related rows in the child table (no action will be taken).
+*/
+
 drop table dependent cascade constraints;
 drop table employee cascade constraints;
 drop table department cascade constraints;
