@@ -23,43 +23,59 @@ print(new_tuple) #('olin', 'ehtesam', 'kamal', 'jamal', 'rahim')
 #dictonary 
 #key and value 
 
+# d = dict()
+# d.update({"name" : "aleen"})
+# print(list(d.values()))
+
 color = "red"
-dict = {"name" : "ehtesam", "age" : 23, "choices" : color} #key and value pair
+d = {"name" : "ehtesam", "age" : 23, "choices" : color} #key and value pair
 #value can be a variable, then it won't need to have ""
-#print(dict) #will print the whole dictonary
+#print(d) #will print the whole dictonary
 
-print(f"Name : {dict['name']}") #f is formated string literal (f string), lets me use variables inside (inside {})
-print("Name : " + dict['name'])  #another way : without using f string
+print(f"Name : {d['name']}") #f is formated string literal (f string), lets me use variables inside (inside {})
+print("Name : " + d['name'])  #another way : without using f string
 
-dict["age"] = 53 #value can be changed
-print(dict.get("age")) #53
-print(dict.get("height", "default value")) #default value if key not found
+d["age"] = 53 #value can be changed
+print(d.get("age")) #53
+print(d.get("height", "default value")) #default value if key not found
 
 
 #removing item
-print(dict.pop("name"))
-print(dict) #{'age': 53, 'choices': 'red'}
-print(dict.popitem()) #remove last item
+print(d.pop("name"))
+print(d) #{'age': 53, 'choices': 'red'}
+print(d.popitem()) #remove last item
 
 #checking if key present
-print("age" in dict) #true
+print("age" in d) #true
 
-#update dictionary
-dict.update({"address" : "dhaka"})
-dict["home"] = "bhairab"
-print(dict.keys()) 
+#update dictonary
+d.update({"address" : "dhaka"})
+d["home"] = "bhairab"
+print(d.keys()) 
 
-print(list(dict.keys())) #keys will be in a list
-print(list(dict.values())) 
-print(list(dict.items())) #key and value in a list of tuples
+print(list(d.keys())) #keys will be in a list
+print(list(d.values())) 
+print(list(d.items())) #key and value in a list of tuples
 
 #length
-print(len(dict)) #3
+print(len(d)) #3
 
 #delete
-del dict['home'] 
-print(dict) #{'age': 53, 'address': 'dhaka'}
+del d['home'] 
+print(d) #{'age': 53, 'address': 'dhaka'}
 
-#copy a dictoanry
-dict_copy = dict.copy();
-print(dict_copy)
+#copy a dictonary
+d_copy = d.copy();
+print(d_copy)
+
+#indexing in a dictonary
+#indexing is not possible in dict
+#so we have to convert dict to tuple so we can use indexing
+d = dict()
+d[1] = "name"
+d[4] = "roll"
+x = list(d.items())  #d.items() converted it to a tuple
+
+for i in range(2):
+    print(str(x[i][0]) + " : " + str(x[i][1]))      
+
