@@ -13,15 +13,27 @@ __int128 input_int128(){
 	return ans;
 }
 
-string output_int128(__int128 x){
-	string s = "";
-	while(x){
-		char last_digit = x % 10 + '0';
-		s += last_digit;
-		x = x / 10;
-	}
-	reverse(s.begin(), s.end());
-	return s;
+string output_int128(__int128 x) {
+    if (x == 0) return "0";
+
+    string s = "";
+    bool neg = 0;
+    
+    if (x < 0) {
+        neg = 1;
+        x = -x; 
+    }
+
+    while (x) {
+        char last_digit = x % 10 + '0';
+        s += last_digit;
+        x = x / 10;
+    }
+
+    if (neg) s += '-';
+
+    reverse(s.begin(), s.end());
+    return s;
 }
 
 int32_t main(){

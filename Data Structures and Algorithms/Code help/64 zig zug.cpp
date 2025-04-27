@@ -66,5 +66,5 @@ void zig_zag_traversal(node* root){
 int main(){
     node* root = NULL;
     buildTree(root);
-    zig_zug_traversal(root);
+    zig_zag_traversal(root);
 }
