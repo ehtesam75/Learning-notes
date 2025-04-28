@@ -32,39 +32,50 @@ node* buildTree(node* &root){
     return root;
 }
 
-void zig_zag_traversal(node* root){
-	queue<node*> q;
-	q.push(root);
-	bool leftToRight = 1;
+vector<int> zig_zag_traversal(node* root){
+	//for this
+	//tc : o(n) each node is visited only once
+	//sc : o(n)
+	// 	Space used by queue = O(width of tree) = O(n) in worst case.
+	// Space used by temp = O(number of nodes at current level) = O(n) in worst case.
 
-	while(!q.empty()){
-		node* current = q.front();
-		q.pop();
-		cout << current->data << ' ';
-		if(leftToRight){
-			if(current->right){
-				q.push(current->right);
-			}
-			if(current->left){
-				q.push(current->left);
-			}
-			leftToRight = 0;
-		}
+    vector<int> v;
+    queue<node*> q;
+    q.push(root);
+    bool left_to_right = 1; 
 
-		else{
-			if(current->left){	
-				q.push(current->left);
-			}
-			if(current->right){
-				q.push(current->right);
-			}
-			leftToRight = 1;
-		}
-	}
+    while(!q.empty()){
+        int size = q.size();
+        vector<int> temp(size);
+        for(int i = 0; i < temp.size(); i++){
+            node* cur = q.front();
+            q.pop();
+
+            int index = left_to_right ? i : size - i - 1;
+            temp[index] = cur->data;
+
+            if(cur->left){
+                q.push(cur->left);
+            }
+            if(cur->right){
+                q.push(cur->right);
+            }
+        }
+
+        left_to_right = !left_to_right;
+        for(auto x : temp){
+            v.push_back(x);
+        }
+    }
+    return v;
 }
 
 int main(){
     node* root = NULL;
     buildTree(root);
-    zig_zag_traversal(root);
+    vector<int> v = zig_zag_traversal(root);
+
+	for(auto x : v){
+		cout << x << ' ';
+	} cout << endl;
 }
