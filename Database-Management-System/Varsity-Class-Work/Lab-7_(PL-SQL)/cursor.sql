@@ -1,0 +1,2 @@
+--If Select query can return more then one rows then
+--cursors should be used to fetch the rows one by one
