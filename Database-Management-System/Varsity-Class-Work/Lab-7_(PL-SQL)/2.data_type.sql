@@ -31,6 +31,8 @@ DECLARE
 
 BEGIN
     select name, sid into v_name, v_sid from student where sid = 1;
+    --If Where condition here is such that query will return multiple records
+    --then CURSOR should be used. Without that it will give error.
     DBMS_OUTPUT.PUT_LINE('USING %TYPE : ');
     DBMS_OUTPUT.PUT_LINE('name : ' || v_name);
     DBMS_OUTPUT.PUT_LINE('sid : ' || v_sid);
