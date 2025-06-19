@@ -86,7 +86,7 @@ END;
 /*
 Write an anonymous block to calculate and display the full price of the 
 book titled “shonkhonil karagar”. 
-The code should then check and apply the discount using the guidelines below t o produce the 
+The code should then check and apply the discount using the guidelines below to produce the 
 discounted price which should also be outputted. You should ensure that your discounted 
 price is round up to 2 decimal places e.g. £12.99. 
  
