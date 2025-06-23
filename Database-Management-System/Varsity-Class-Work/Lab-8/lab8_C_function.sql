@@ -1,8 +1,4 @@
 -- function in pl sql
--- begin
---     execute immediate 'drop table products';
--- exception when others then null; end;
--- /
 
 drop table products;
 
