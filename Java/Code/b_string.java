@@ -1,6 +1,12 @@
 import java.security.MessageDigest;
 
 public class b_string {
+    public static void print(){
+        //why use static here?
+        //because we are calling this method from a static context (main method)
+        System.out.println("hello world");
+    }
+
     public static void main(String[] args){
         String name = new String("   hello world");
 //        string is reference type in java
@@ -23,5 +29,12 @@ public class b_string {
         System.out.println(name.toUpperCase());
 
         System.out.println(name.trim()); //removes leading and trailing spaces
+
+        String a = "hello";
+        System.out.println("is equal : " + (a == "hello"));
+        System.out.println(a.equals("hello"));
+
+        //CALLING A METHOD
+        print();
     }
 }

@@ -1,7 +1,6 @@
-import javax.swing.plaf.ColorUIResource;
 import java.text.NumberFormat;
 
-public class e {
+public class e_math_formating_number {
     public static void main(String[] args) {
 //        math class
         System.out.println(Math.round(3.49f)); // rounds to the nearest integer
@@ -27,7 +26,8 @@ public class e {
         System.out.println(currency.format(3343.334)); //$3,343.33
 
         //or we could do this instead
-        NumberFormat.getCurrencyInstance().format(3343.334);
+        String store = NumberFormat.getCurrencyInstance().format(3343.334);
+        System.out.println(store);
         //this is called method chaining (calling a method on the return value of another method)
     }
 

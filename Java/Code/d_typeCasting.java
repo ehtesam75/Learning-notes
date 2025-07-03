@@ -1,6 +1,4 @@
-import java.net.Inet4Address;
-
-public class d {
+public class d_typeCasting {
     public static void main(String[] args) {
         final float pi = 3.14F; //now pi is a constant, it cannot be changed
 //        pi = 3.2f; error

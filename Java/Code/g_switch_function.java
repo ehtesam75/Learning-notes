@@ -1,4 +1,4 @@
-public class g_switch {
+public class g_switch_function {
     public static void main(String[] args) {
         String day = "tuesday";
         switch (day){
