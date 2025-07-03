@@ -42,9 +42,76 @@ JVM is the core engine that runs Java bytecode and is included inside the JRE
 //JVM (Java Virtual Machine): Executes the .class bytecode.
 //JRE (Java Runtime Environment): Contains the JVM and libraries needed to run .class files.
 
-public class basic_java {
+import java.awt.*;
+import java.time.Clock;
+import java.util.Date;
+
+public class a_basic_java {
     public static void main(String[] args){
+        //write psvm for shortcut for public static void main
         System.out.print("Hello world\n");
-        System.out.print("My first java program\n ");
+        //here system is a class, out a field, main is a method
+
+        System.out.println("this will add a new line auto");
+        System.out.println("null char: \0 \ndouble quote : \"");  //null char and double quote
+        //write sout for shortcut for System.out.println
+
+        int age = 3;
+        System.out.println(age);
+
+//        int views = 2_202_323_323; error; out of range
+//        long views= 2_202_323_323; still error (by default java sees an integer as int)
+        long views= 2_202_323_323L;
+//        in java we can use _ in between digits for better understanding
+//        range of int -2B to 2B
+
+//        float a = 23.32; error by default decimal points is seen as double
+        float a = 23.32F;
+        boolean isValid = true;
+
+//        premitive type
+        int p = 3;
+        int add = p;
+        p = 5;
+        System.out.println(p);
+
+//        reference type
+        Date now = new Date(); //HERE now variable is a instance/object of date class
+//        now.getTime();
+        System.out.println(now);
+
+        Point point1 = new Point(7, 8);     //just write 7, 8
+        Point point2 = point1;
+
+        point1.x = 5;
+        System.out.println(point2.x);
     }
 }
+
+/*
+note:
+Escape sequences are special character combinations that start with a backslash (\)
+and are used to represent characters that are difficult or impossible to
+type directly in a string or character literal.
+\n - Newline (line feed)
+\t - Tab character
+\r - Carriage return (it's used to move the cursor to the beginning of the line)
+\" - Double quote
+\' - Single quote
+\\ - Backslash
+\b - Backspace
+\0 - Null character
+
+
+method: function inside a class
+
+two catagory of type
+premitive type : for storing simple values (num, char, booleans)
+            memeory allocate and released by JRE
+reference type : for storing complex values (data, mail message)
+            when dealing with this, we need to manually allocate memory
+            but JRE auto de allocate the memory when needed
+            this type have members (i.e. can access the member using .)
+*/
+
+
