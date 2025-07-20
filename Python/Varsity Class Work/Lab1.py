@@ -66,7 +66,7 @@ def display(a,  b):
     print(a % b)
     print(a ** b)
 
-display(2, 3)
+display(a, b)
 
 
 

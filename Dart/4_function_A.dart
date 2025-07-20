@@ -24,6 +24,9 @@ void main(){
     //named arguments
     //means i can pass arguments in any order
     print_name(age: null, name : "aleen");
+
+    //positional and named arguments
+    functions('aleen', true, age: 29 );
 }
 
 
@@ -41,7 +44,13 @@ int func(data){ //here data is of type dynamic;
     return data.length;
 }
 
-void print_name({required name,int? age, String address = "unknown"}){ //named arguments
-    //age nullable, address has default value
+//function with named arguments
+void print_name({required name, int? age, String address = "unknown"}){ //named arguments
+    //age nullable (this means user may or may pass as argument), address has default value
     print(name);
+}
+
+//function with positional and named arguments
+void functions(String name, bool valid, {required int age, String? address}){
+    print("name is : $name and age is $age");
 }
