@@ -1,1 +1,0 @@
-base class Animal3 extends Animal2{}
