@@ -1,9 +1,13 @@
+//camalCase (newTest): is used for variable names, function names, and method names
+//PascalCase (NewTest): is used for class names, enum names, and type names
 
 void main(){
     // variable
     print('3' * 10);  //3333333333
     dynamic value = 'hello dart'; // works like auto keyword in cpp
     print(value.runtimeType); // prints the type of value; string
+    print((value as String).length); //before using 'as string' we couldn't access the string's properties (like .length)
+    // 'as' is used for type casting
     print(value);
 
     int num = 10;
@@ -16,7 +20,7 @@ void main(){
     String s = 'dart programming';
     s = '$s is fun'; //dart programming is fun
     print(s);
-    s = '${s.length} is the length';
+    s = 'so ${s.length} is the length';
     print(s); //23
 
     //note: avoid string concatenation with + operator as it is less efficient
@@ -73,5 +77,16 @@ void main(){
     //so final, var is not recommended for nullable variables
 
 
+    //diff between var and final
+    //var : Mutable: can change its value (reassign it) after it's created.
+    //final : Immutable: can only set its value once. After initialization, it cannot be changed.
+    var aleen = 3;
+    aleen = 23; //good
+    print(aleen);
+
+    // aleen = "ehe";   //error aleen is not String
+
+    final joyi = 23;
+    // joyi = 2;  //error final is immutable
     
 }
