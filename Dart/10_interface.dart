@@ -4,8 +4,15 @@
 //It's a promise that your class will have all the same public methods and properties 
 //as the interface, but you have to write the code for all of them yourself
 
+//interface
+// An interface is like a contract or a blueprint.
+// It defines what methods a class must have, but not how they work.
+
 
 class Vehicle{
+    //this is an interface
+    //it defines the methods and properties that a class must implement
+    //an abstract class can also be used as an interface
     int speed = 5;
 
     void accelerate(){

@@ -30,19 +30,16 @@ void main() {
 
 
     //switch statement
+    //in dart, break is not required at the end of each case
     String day = 'Tuesday';
     switch (day) {
         case 'sunday':
-            break;
         case 'Monday':
             print('Its monday');
-            break;
         case 'Tuesday' when age < 18:   //both have to true to execute this case
             print('tuesday');
-            break;
         case 'Wednesday':
             print('its wednesday');
-            break;
         default:
             print('some other day or Invalid day');
     }

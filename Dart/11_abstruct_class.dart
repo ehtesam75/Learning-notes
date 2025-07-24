@@ -1,10 +1,8 @@
 //Abstract classes are used to define a common interface for a group of related classes.
 //we cannot create an instance of an abstract class.
 
-
-
 void main(){
-    
+    // Vehicle vehicle = Vehicle(); //error; can't create an instance of an abstract class
 }
 
 abstract class Vehicle{
@@ -30,5 +28,4 @@ class Truck implements Vehicle{
     void accelarate() {
         print("Truck is accelerating with $numberOfWeels");
     }
-    //if we implements a abstruct class, we must implement all of its methods as usal
 }
