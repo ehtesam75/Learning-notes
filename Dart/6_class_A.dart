@@ -18,7 +18,7 @@ void main(){
     final Cookie new_instance = Cookie();
     new_instance.size = 323.33;
     print(new_instance.size); //323.33
-    //this changed cuz size is not final, only shape is final
+    //this changed cuz size is not final, only new_instance (a instance that points to Cookie()) is final
 
     // new_instance = Cookie(); //now new_instance points to a new instance
     //this is an error; final variables cannot be reassigned

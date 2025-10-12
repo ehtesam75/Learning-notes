@@ -41,6 +41,7 @@ void main(){
     //dynamic is dynamically typed (type can change at runtime)  
     var x = 32;  //var auto identifies the type just like dynamic
     // x = 'hello'; //error
+    x = 22; //good
     dynamic y = 32;
     y = 'hello'; //good
 
@@ -71,6 +72,7 @@ void main(){
     int? age2; //this is also the same as above; age is nullable
 
     final some_age = null;  //note that here some_age is dynamic;
+    //When assigning null to a final variable without specifying a type, Dart infers the type as dynamic
     final some_age2 = 10; // here some_age2 is int
     print(some_age2.bitLength); // can access properties of int
     // some_age.bitLength; //error; cannot access properties of null

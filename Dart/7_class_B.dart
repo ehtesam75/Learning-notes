@@ -7,7 +7,7 @@ void main(){
     print(cookie.calculate_size());
 
     // cookie.height = 10;  can't change height
-    print(cookie.height); //6
+    print(cookie.height); //6 (used: getter 'height')
 
     cookie.setHeight = 10; //this is the syntax for setter; notice: it's not setHieight(10)!
     print(cookie.height);

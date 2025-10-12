@@ -5,7 +5,7 @@
 
 void main(){
     Car car = Car();
-    print(car.speed); //5
+    print(car.speed); //15
     car.printInfo(); //4  
 
     Vehicle car_instance = Car();   

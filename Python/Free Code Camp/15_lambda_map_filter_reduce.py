@@ -6,7 +6,7 @@
 
 lambda num : num + 10 # num is agrument and num + 10 is expression
 
-#note : diff between and statement
+#note : diff between expression and statement
 #expression returs a value and statement does not
 
 multiply = lambda a, b : a * b #multiply is a function

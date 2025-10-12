@@ -26,3 +26,20 @@ class Constants{
         return 25;
     }
 }
+
+
+//explaination: 
+
+// Static Variables Belong to the Class, Not Instances
+// class Constants{
+//     static String greeting = "hello world";  // Belongs to the CLASS
+//     int val = 10;                            // Belongs to INSTANCES
+// }
+
+
+// Static variables are stored in class memory area
+// Constants.greeting;  // No instance needed - direct class access
+
+// Instance variables need an object to exist
+// var c = Constants();  // Constructor called - creates object in memory
+// print(c.val);        // Accesses instance variable
