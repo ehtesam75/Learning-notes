@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student List</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/student_list.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Information System</h1>
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Phone No</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for student in students %}
+            <tr>
+              <td>{{ student.student_id }}</td>
+              <td>{{ student.name }}</td>
+              <td>{{ student.department }}</td>
+              <td>{{ student.phoneNo }}</td>
+              <td>{{ student.address }}</td>
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="5">No students found.</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <script src="{% static 'js/student_list.js' %}"></script>
+  </body>
+</html>

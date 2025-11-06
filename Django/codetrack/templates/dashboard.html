@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard - CodeTrack{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    {% csrf_token %}
+
+    <div class="controls">
+        <input type="text" id="search-box" placeholder="Search problems..." class="search-box">
+        
+        <div class="filter-group">
+            <label>Filter by difficulty:</label>
+            <select id="difficulty-filter">
+                <option value="all">All</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>Sort by:</label>
+            <select id="sort-select">
+                <option value="name">Name</option>
+                <option value="difficulty">Difficulty</option>
+                <option value="solved">Solved Status</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="problems-container">
+        <table class="problems-table">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Problem Name</th>
+                    <th>Difficulty</th>
+                    <th>Online Judge</th>
+                    <th>PDF</th>
+                </tr>
+            </thead>
+            <tbody id="problems-list">
+                {% for problem in page_obj %}
+                <tr class="problem-row" 
+                    data-id="{{ problem.id }}"
+                    data-title="{{ problem.title }}"
+                    data-difficulty="{{ problem.difficulty }}"
+                    data-solved="{{ problem.solved|lower }}"
+                    data-link="{{ problem.link }}">
+                    <td>
+                        <form method="post" action="{% url 'toggle_solved' problem.id %}" style="margin:0;">
+                            {% csrf_token %}
+                            <input type="checkbox" class="solve-checkbox" onchange="this.form.submit()"
+                                   {% if problem.solved %}checked{% endif %}>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="{{ problem.link }}" target="_blank" class="problem-link">
+                            {{ problem.title }}
+                        </a>
+                    </td>
+                    <td>
+                        <span class="difficulty-badge difficulty-{{ problem.difficulty|lower }}">
+                            {{ problem.difficulty }}
+                        </span>
+                    </td>
+                    <td>
+                        <span class="judge-badge">{{ problem.online_judge }}</span>
+                    </td>
+                    <td>
+                        {% if problem.problem_pdf %}
+                            <a href="{{ problem.problem_pdf.url }}" target="_blank" class="pdf-link">View PDF</a>
+                        {% else %}
+                            <span class="no-pdf">—</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pagination">
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}">⬅ Previous</a>
+        {% endif %}
+        <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">Next ➡</a>
+        {% endif %}
+    </div>
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

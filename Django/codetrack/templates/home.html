@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}CodeTrack - Home{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <div class="hero-section">
+        <h1>Welcome to CodeTrack</h1>
+        <p>Track your coding problems and progress across multiple online judges</p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>Total Problems</h3>
+            <div class="stat-number">{{ total_problems }}</div>
+        </div>
+        <div class="stat-card">
+            <h3>Online Judges</h3>
+            <div class="stat-number">{{ total_oj }}</div>
+        </div>
+        <div class="stat-card">
+            <h3>Total Users</h3>
+            <div class="stat-number">{{ total_users }}</div>
+        </div>
+    </div>
+
+    <div class="recent-section">
+        <h2>Recently Added Problems</h2>
+        <div class="problems-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Difficulty</th>
+                        <th>Online Judge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for problem in recent_problems %}
+                    <tr>
+                        <td>{{ problem.id }}</td>
+                        <td>{{ problem.title }}</td>
+                        <td><span class="badge badge-{{ problem.difficulty|lower }}">{{ problem.difficulty }}</span></td>
+                        <td>{{ problem.online_judge }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="4" class="empty-message">No problems added yet</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <a href="{% url 'register' %}" class="btn btn-large">Get Started</a>
+    </div>
+</div>
+{% endblock %}

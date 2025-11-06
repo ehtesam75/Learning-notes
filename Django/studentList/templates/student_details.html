@@ -1,0 +1,23 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ student.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/student_grid.css' %}">
+</head>
+<body>
+    <h2>{{ student.name }} (Roll: {{ student.roll }})</h2>
+    {% if student.student_img %}
+    <img src="{{ student.student_img.url }}" width="200"><br>
+    {% endif %}
+    <p><strong>Student ID:</strong> {{ student.student_id }}</p>
+    <p><strong>Phone:</strong> {{ student.phoneNo }}</p>
+    <p><strong>Department:</strong> {{ student.department }}</p>
+    <p><strong>Address:</strong> {{ student.address }}</p>
+    {% if student.cv %}
+    <a href="{{ student.cv.url }}" target="_blank">📄 Open CV</a><br>
+    {% endif %}
+    <a href="{% url 'student_grid' %}">⬅ Back to List</a>
+</body>
+</html>

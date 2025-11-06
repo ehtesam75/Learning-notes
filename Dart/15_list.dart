@@ -17,6 +17,6 @@ void main(){
 class Student{
     final dynamic name; 
     Student(this.name){
-        name 
+        
     }
 }

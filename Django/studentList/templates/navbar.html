@@ -1,0 +1,18 @@
+{% load static %}
+
+<!-- ✅ Navbar Section Only -->
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+<nav class="navbar">
+    <div class="nav-container">
+        <h1 class="logo">Student Management</h1>
+        <ul class="nav-links">
+            <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+            <li><a href="{% url 'student_list' %}">Student List</a></li>
+            <li><a href="{% url 'add_student' %}">Add Student</a></li>
+            <li><a href="#">Delete Student</a></li>
+            <li><a href="#">Modify Student</a></li>
+        </ul>
+    </div>
+</nav>
+    

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    {% comment %} <nav class="navbar">
+        <h1>🎓 Student Management Dashboard</h1>
+    </nav> {% endcomment %}
+
+    {% include "navbar.html" %}
+
+    <div class="container">
+        <div class="card">
+            <h2>Total Students</h2>
+            <p class="count" data-target="{{total_students}}">
+                0
+            </p>
+        </div>
+        <div class="card">
+            <h2>Departments</h2>
+            <p class="count" data-target="{{total_departments}}">
+                0
+            </p>
+        </div>
+        <div class="card">
+            <h2>Recently Added</h2>
+            <p class="count" data-target="{{recent_students|length}}">
+                0
+            </p>
+        </div>
+    </div>
+
+    <div class="recent">
+        <h2>Recent Students</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Phone</th>
+            </tr>
+            {% for student in recent_students %}
+            <tr>
+                <td>{{ student.student_id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.department }}</td>
+                <td>{{ student.phoneNo }}</td>
+            </tr>
+
+            {% empty %}
+            <tr>
+                <td colspan="4">No recent students found.</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+
+    <script src="{% static 'js/dashboard.js' %}"></script>
+</body>
+</html>

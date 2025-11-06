@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Profile - {{ user.username }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <a href="{% url 'dashboard' %}" class="btn back-btn">← Back to Dashboard</a>
+    
+    <div class="profile-header">
+        <h2>{{ user.username }}</h2>
+        <p>Member since {{ user.date_joined|date:"F d, Y" }}</p>
+    </div>
+
+    <div class="profile-stats">
+        <div class="stat-card">
+            <div class="stat-number">{{ total_solved }}</div>
+            <div class="stat-label">Total Solved</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">{{ total_problems }}</div>
+            <div class="stat-label">Total Problems</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">{{ completion_rate }}%</div>
+            <div class="stat-label">Completion Rate</div>
+        </div>
+    </div>
+
+    <div class="difficulty-breakdown">
+        <div class="difficulty-stat easy">
+            <div class="count">{{ easy_solved }}</div>
+            <div class="stat-label">Easy</div>
+        </div>
+        <div class="difficulty-stat medium">
+            <div class="count">{{ medium_solved }}</div>
+            <div class="stat-label">Medium</div>
+        </div>
+        <div class="difficulty-stat hard">
+            <div class="count">{{ hard_solved }}</div>
+            <div class="stat-label">Hard</div>
+        </div>
+    </div>
+
+    <div class="solved-problems-section">
+        <h3>Solved Problems ({{ solved_problems|length }})</h3>
+        {% if solved_problems %}
+            <ul class="solved-list">
+                {% for solved in solved_problems %}
+                <li class="solved-item">
+                    <div>
+                        <a href="{{ solved.problem.link }}" target="_blank" class="solved-item-title">
+                            {{ solved.problem.title }}
+                        </a>
+                        <span class="difficulty-badge difficulty-{{ solved.problem.difficulty|lower }}">
+                            {{ solved.problem.difficulty }}
+                        </span>
+                        <span class="judge-badge">{{ solved.problem.online_judge }}</span>
+                    </div>
+                    <span class="solved-date">Solved on {{ solved.solved_at|date:"M d, Y" }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p style="text-align: center; color: #999; padding: 40px;">No problems solved yet. Start solving!</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/profile.js' %}"></script>
+{% endblock %}
