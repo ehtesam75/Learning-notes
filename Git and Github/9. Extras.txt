@@ -3,9 +3,12 @@
     git fetch origin
     git reset --hard origin/main
 
-# Remove files from remote repository
-    git rm <file_name>
-    git commit -m "Remove <file_name>"
+# Remove files/folder from remote repository
+    git rm example.txt
+    git rm example1.txt example2.txt       # remove multiple files
+    git rm -r folder_name                  # remove a folder and its contents
+    git rm *.log                           # remove files matching a pattern
+    git commit -m "Remove file or folder"
     git push origin main
 
 
