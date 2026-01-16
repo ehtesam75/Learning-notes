@@ -1,0 +1,16 @@
+
+# Reset Local Branch to Remote Main
+    git fetch origin
+    git reset --hard origin/main
+
+# Remove files from remote repository
+    git rm <file_name>
+    git commit -m "Remove <file_name>"
+    git push origin main
+
+
+# Collect Static Files in Django
+# used in Django projects to gather all static files into a single directory for production use.
+    python manage.py collectstatic --clear --noinput
+
+
