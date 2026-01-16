@@ -15,12 +15,19 @@
         git push origin main --force
 
 
-# Remove files/folder from remote repository
+# Remove files/folder from local and remote repository
     1.  git rm example.txt
         git rm example1.txt example2.txt       # remove multiple files
         git rm -r folder_name                  # remove a folder and its contents
         git rm *.log                           # remove files matching a pattern
     2.  git commit -m "Remove file or folder"
+    3.  git push origin main
+
+
+# Remove files/folder from remote but keep them in working directory
+    1.  git rm --cached example.txt
+        git rm --cached -r folder_name       
+    2.  git commit -m "Remove file or folder from tracking"
     3.  git push origin main
 
 
