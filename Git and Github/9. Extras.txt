@@ -1,15 +1,29 @@
-
 # Reset Local Branch to Remote Main
-    git fetch origin
-    git reset --hard origin/main
+    1. git fetch origin
+    2. git reset --hard origin/main
+
+
+# Goes back to specific number of commits
+# It moves your local branch back by 2 commits and deletes those commits and their changes locally.
+    git reset --hard HEAD~2   # goes back 2 commits
+
+
+# Remove Last Commit from Remote (keep changes locally)
+    # 1. Undo last commit locally and keep changes in working directory (unstaged):
+        git reset HEAD~1
+    # 2. Force-push to remove the commit from remote:
+        git push origin main --force
+
+
+
 
 # Remove files/folder from remote repository
-    git rm example.txt
-    git rm example1.txt example2.txt       # remove multiple files
-    git rm -r folder_name                  # remove a folder and its contents
-    git rm *.log                           # remove files matching a pattern
-    git commit -m "Remove file or folder"
-    git push origin main
+    1.  git rm example.txt
+        git rm example1.txt example2.txt       # remove multiple files
+        git rm -r folder_name                  # remove a folder and its contents
+        git rm *.log                           # remove files matching a pattern
+    2.  git commit -m "Remove file or folder"
+    3.  git push origin main
 
 
 # Collect Static Files in Django
