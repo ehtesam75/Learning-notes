@@ -15,8 +15,6 @@
         git push origin main --force
 
 
-
-
 # Remove files/folder from remote repository
     1.  git rm example.txt
         git rm example1.txt example2.txt       # remove multiple files
