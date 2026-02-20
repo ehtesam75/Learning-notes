@@ -2,6 +2,29 @@
     1. git fetch origin
     2. git reset --hard origin/main
 
+# Undo last N commits (local and GitHub)
+Commits removed locally
+Commits removed from GitHub
+⚠️ This rewrites history (safe only if you’re the only one working).
+
+Step 1: Reset local branch
+git reset --hard HEAD~N
+
+
+➡️ Replace N with number of commits to undo
+Example (undo last 3 commits):
+
+git reset --hard HEAD~3
+
+Step 2: Force push to GitHub
+git push origin <branch-name> --force
+
+
+Example:
+
+git push origin main --force
+
+
 
 # Goes back to specific number of commits
 # It moves your local branch back by 2 commits and deletes those commits and their changes locally.
@@ -33,6 +56,7 @@
 
 # Collect Static Files in Django
 # used in Django projects to gather all static files into a single directory for production use.
-    python manage.py collectstatic --clear --noinput
+    python manage.py collectstatic --noinput
+
 
 
